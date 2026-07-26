@@ -13,8 +13,13 @@ fingerprint:
 
 ```bash
 curl -fsSLO https://raw.githubusercontent.com/cqels/CQELS4J/master/cosign.pub
-sha256sum cosign.pub   # expect 36dd8daa9988f23eb40c4f3550fa7bdfa3796e5e58cce8d23b9cc6a99f47f30b
+echo "36dd8daa9988f23eb40c4f3550fa7bdfa3796e5e58cce8d23b9cc6a99f47f30b  cosign.pub" | sha256sum --check --strict -
+# macOS: echo "36dd8daa9988f23eb40c4f3550fa7bdfa3796e5e58cce8d23b9cc6a99f47f30b  cosign.pub" | shasum -a 256 --check -
 ```
+
+That `--check` form **fails** on a mismatch. Printing the digest and
+eyeballing it does not: the command succeeds either way, so a swapped
+key sails through unnoticed.
 
 ## Verify the manifest
 
@@ -31,8 +36,14 @@ not fetch. Compare a specific artifact instead:
 
 ```bash
 REL=org/cqels/cqels-engine/2.0.0-alpha.16/cqels-engine-2.0.0-alpha.16.jar
-grep " $REL\$" SHA256SUMS
-sha256sum ~/.m2/repository/$REL
+want=$(grep "  $REL$" SHA256SUMS | cut -d' ' -f1)
+got=$(sha256sum ~/.m2/repository/$REL | cut -d' ' -f1)
+if [ -n "$want" ] && [ "$want" = "$got" ]; then
+  echo "OK   $REL"
+else
+  echo "MISMATCH $REL (signed ${want:-<absent from manifest>}, local $got)" >&2
+  exit 1
+fi
 ```
 
 Or check everything Maven resolved, from your local repository root so
