@@ -48,7 +48,9 @@ fi
 
 Or check everything Maven resolved, from your local repository root so
 the manifest's relative paths line up (skipping the `*-shaded.jar`,
-which is listed but not served here — it ships as the container image).
+which is listed but not served here — and which currently has no
+anonymous download route at all: every channel carrying it needs
+credentials today).
 
 This exits non-zero on any mismatch, and also when it checked nothing:
 a verification step that cannot fail is worse than none, because it
