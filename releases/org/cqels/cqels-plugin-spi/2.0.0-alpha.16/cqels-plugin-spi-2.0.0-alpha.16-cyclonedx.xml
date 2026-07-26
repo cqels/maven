@@ -1,0 +1,3207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom serialNumber="urn:uuid:512a0c14-23d0-3f96-ab1b-bb4f6dd622af" version="1" xmlns="http://cyclonedx.org/schema/bom/1.6">
+  <metadata>
+    <lifecycles>
+      <lifecycle>
+        <phase>build</phase>
+      </lifecycle>
+    </lifecycles>
+    <tools>
+      <components>
+        <component type="library">
+          <author>OWASP Foundation</author>
+          <group>org.cyclonedx</group>
+          <name>cyclonedx-maven-plugin</name>
+          <version>2.9.2</version>
+          <description>CycloneDX Maven plugin</description>
+          <hashes>
+            <hash alg="MD5">843a7130400f75d33f563dc7e9f52dea</hash>
+            <hash alg="SHA-1">2cac5a176b9f48801dfc4910d4f6a34bfbb13445</hash>
+            <hash alg="SHA-256">d9e5a12bac3c1a91d85f3a1ad84307099f457ff24aa65b438ba7de9ca784a54e</hash>
+            <hash alg="SHA-512">636f788518752c5a23d14bad41d68b0d549e4b3a3d720d66f2f6e2b8b956207942ee12abba968a1e9aac6cf1d78d9e738a4a75eeb8bc6fca2377030fbb482407</hash>
+            <hash alg="SHA-384">72aad41633b92fadd4dbd1c6f5c1b956836b22d3b96afbdd7ca8b8eb0456eec00c2ed658e3c2d4e93d95048bcc23dac8</hash>
+            <hash alg="SHA3-384">9837cee0f9b7d575f8d88df3ad6f58a075032ad2635e0987abbc102240327f1cec87dc062b3034009f028ab5baf988f9</hash>
+            <hash alg="SHA3-256">4c654267cde6eb6d295dbc06b33e33528412bee57549dae89c85b8df8202dbcb</hash>
+            <hash alg="SHA3-512">f7da73632ef2fd1c2d85f0cf5eebc2b6a3ff1ae2ed0945442e679da71490562a2ff6b67422dbd5285f4042eda6637e6f3544f62825a625b38efacfdebc8df137</hash>
+          </hashes>
+        </component>
+      </components>
+    </tools>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-plugin-spi@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-plugin-spi</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Deploy-time plugin interface for CQELS (#531): ServiceLoader-discovered plugins that
+        advertise governed MCP tools through a neutral, MCP-SDK-free descriptor. Published (no
+        maven.deploy.skip) so external plugin authors can compile against it.</description>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-plugin-spi@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-plugin-spi</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <properties>
+      <property name="maven.goal">makeBom</property>
+      <property name="maven.scopes">compile,provided,runtime,system</property>
+      <property name="cdx:reproducible">enabled</property>
+    </properties>
+  </metadata>
+  <components>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-engine@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-engine</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Stream processing engine implementation with SPARQL and CEP support</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">e1969f7ce2ffb5569a509101199c3b7f</hash>
+        <hash alg="SHA-1">0511f66e9eba3da8d8748decc3ddcf21df299766</hash>
+        <hash alg="SHA-256">96f698d61814f4b5d7f35b12892ef3f6cd54c94ad0a421c0fd1aba9bb69cc19a</hash>
+        <hash alg="SHA-512">bc175c9becf1c2ec7de8132a230ab3ddab3ab5e0de40942b934e83758c4f6faf02d9ec1c9623b6ae1726cf2e2d1cc26175759ba7d20c6ead0e890a42281f5628</hash>
+        <hash alg="SHA-384">2720f0ac4842bf3afe48aba4a1c9f9c49d0a1fff8c02578c895ab2bdb8daf5c4e1121c2c95cb0f2e406752e6343d8215</hash>
+        <hash alg="SHA3-384">b4abb3d1e6770c8c4d65616c96ca8397e2eeb81d256107b6bfaca712aba617e03e79043eb430c5cb1cbe8000f47ada5e</hash>
+        <hash alg="SHA3-256">e7156273fbed97da725fadc48e2e5e8f8bbde25f484067b49ac1e7c2c60cc67c</hash>
+        <hash alg="SHA3-512">75012f384e89482e2eab4e44aaa573e65ff10c4d4554c9de064ef83d80c339d8ec1836a04b59b633764631dfd1d4b564702eadb1b2aa8dcc3448725ee46a8c2c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-engine@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-engine</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-core</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Core abstractions for stream processing, windowing, and query models</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">febae16cacb0e46cf716a8f0579ffb60</hash>
+        <hash alg="SHA-1">9cd4e65cdee3fe1ed85e740f5313262f1e59a4f4</hash>
+        <hash alg="SHA-256">77da8d7a3832591e6679354ecba22cf6a27a1681e460fc0e0278550593139997</hash>
+        <hash alg="SHA-512">830734dc2b362a8bf98e77d25245fd32c439a571c68e605e5a14e1ba95fa9846641bec81e9d81d654f18e262815d6a47ea28a22289938e7de4cce960f6c9aadc</hash>
+        <hash alg="SHA-384">8d1cb01d49b9298c84f6cb222d83de964b9ae98c6111b619b1bf0fd8bd18085e0e60b754e2282a1c2ab2bf140235c697</hash>
+        <hash alg="SHA3-384">fda8a93655414db99ef2b72f089263091facf843ee565f1a0d8dd06b8952a3dac44b479d9eaba3f0e53674e1ff0e7953</hash>
+        <hash alg="SHA3-256">d9be03e893363cdf47a64c4ac2de59f50c83fe93af83fe90682f663b269c9c9e</hash>
+        <hash alg="SHA3-512">139087ccb4a20bccb0b33aac189e4902dd4d9482304c5a88818a81f4238b8758e540118ad60dcabdfeb2f91e970baf3d4e4fbe1439b98e76ec75be4e0bf4106d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-core</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-geo@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-geo</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Spatial computing and reasoning primitives for CQELS (GeoSPARQL-first)</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">efcdfbeb5727ebe5c825c9c47f1b9b50</hash>
+        <hash alg="SHA-1">e56d63a1acfdcaeedb1be3e1cfcca7229f252f7d</hash>
+        <hash alg="SHA-256">702639730856af7e7a632dc23594d06f5b81e897d00ef77556df112b58d0d3d4</hash>
+        <hash alg="SHA-512">d61ae1c8097591f6dd1b5a07e37b5d77ac7248ccd71df8d2fd5a58b8a75e81a5093da296e73913f352ddbf13d927e492def290e8cb73683c364823960d51eba4</hash>
+        <hash alg="SHA-384">54a131f69cb644a850836d8ab00cca73f79b0ab5b58c0fa39da6fc6339d0101e14b2d2fbef136bc5ab4e6bef1a6139e0</hash>
+        <hash alg="SHA3-384">f830a1bb7b695f736ce8fb38fd8352c9763cc0c3953725547ba04cc5e3dbf198a1c813be6bee9125e6c243ea393a4b7a</hash>
+        <hash alg="SHA3-256">539e6108f1180e8cb8f102c0191010f6876fb73b8a0da7893efc4bcddffa3edd</hash>
+        <hash alg="SHA3-512">c9062e96ce7e3ed184809794683510821e2aa7a31e70355b342f641b7e838421f52cd1e487a763cdd10e4d54edaa03a63dd8d5336a70104208a41103743540fe</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-geo@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-geo</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-geosparql@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryalgebra-geosparql</name>
+      <version>4.3.8</version>
+      <description>Query algbebra implementations to support the evaluation of GeoSPARQL.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">45c07c1d7a58ba2b40a18a41df865cc3</hash>
+        <hash alg="SHA-1">c5716d7731a3f528438b4062cbd43882b3b14fd1</hash>
+        <hash alg="SHA-256">eabb4be9b0815b144abedd84001781cc9070f614cefd83dddd5a5855bfc56ec4</hash>
+        <hash alg="SHA-512">45fe4956ddfcae012f63e76eb4e22fedffebf5112ba1b0b976326f7d6b4baaa242a61ec956444d83cd4894767d6d002bb927156d30193bf1a066300278ecd421</hash>
+        <hash alg="SHA-384">2910f124d4775d722980f94b5e2fd977a6c2eb13e950b9fd8e618c561f94ef6c998bdc2da405ce7e60f06f53fbe57eb5</hash>
+        <hash alg="SHA3-384">6bb3b60d35ca58eafc8cfd56adcddca6dbf8875db8e0d1008c2cd49dc85072f59a699d647b7684221ca618ffab0f62f6</hash>
+        <hash alg="SHA3-256">755fad36cea42642a4da391bea78f87396aa450a48af78aa0a9e0ea0bf6db86a</hash>
+        <hash alg="SHA3-512">39db277e2ae66bc78462343438d6a76fe0f975ef6b71e961f79480b0079876015e5beb3e61e12ca3d04a4c26627eded6a3ba93838bd622061cb958e3d3106e0f</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-geosparql@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-geosparql/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-geosparql</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.locationtech.spatial4j/spatial4j@0.8?type=jar">
+      <publisher>LocationTech</publisher>
+      <group>org.locationtech.spatial4j</group>
+      <name>spatial4j</name>
+      <version>0.8</version>
+      <description>Spatial4j is a general purpose spatial / geospatial ASL licensed open-source Java library. It's
+    core capabilities are 3-fold: to provide common geospatially-aware shapes, to provide distance
+    calculations and other math, and to read shape formats like WKT and GeoJSON.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">399dfde7eb38b8d1398fdbac9b514ad9</hash>
+        <hash alg="SHA-1">f3ff59c2c540102ae157a1786cb80e82ce9c9f19</hash>
+        <hash alg="SHA-256">566cfe7eea3a96ef7dd2f4e30394edefca71454505513f090fa54be21c529082</hash>
+        <hash alg="SHA-512">bda04d9752452bec5f8618f61101927fd48d36930ffc924368750b52aafaf0b7a973e8254019199a7d46df2adf5b4bb637a7b55dad7b75b0aeb05fc3639a5a51</hash>
+        <hash alg="SHA-384">d2450a0b9d999be610282f0cc35c41bcce206e37f41c99d483843d847bc2ed1d7161dac301c622167d30bcffc10ef9af</hash>
+        <hash alg="SHA3-384">d1c0b53777e65d26bacbda3a7f937d42ad3dc53233b4141cf6b7b2e87fc27ed115f37ddc1c17ab121e7899bf19ee3ccd</hash>
+        <hash alg="SHA3-256">c02e33f687333a3f880cc06f8faa579aeba3de4a0bfccb6cb8a01ece98107c25</hash>
+        <hash alg="SHA3-512">a664165091be0d9b1fe673f03f89abbd2386d554a5eeeb4e0d292c3d336ab3010da72f46916763344231303fb4f0a40bd09a368e04e88bffcdd7c7909ca4c4ed</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.locationtech.spatial4j/spatial4j@0.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://projects.eclipse.org/projects/locationtech.spatial4j</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://ci.eclipse.org/spatial4j/job/Spatial4j/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/locationtech/spatial4j/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://www.eclipse.org/lists/spatial4j-dev</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/locationtech/spatial4j</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.locationtech.jts/jts-core@1.18.2?type=jar">
+      <group>org.locationtech.jts</group>
+      <name>jts-core</name>
+      <version>1.18.2</version>
+      <description>The JTS Topology Suite is an API for 2D linear geometry predicates and functions.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">f2e7f17acd8673f12c0cd21a84978fd0</hash>
+        <hash alg="SHA-1">cf69824dabd57099eff3bceb1a93a2061cc9a0ff</hash>
+        <hash alg="SHA-256">8cd3d3f31c990482b0a0ae2786fc3864ffa8a76303ccd1b6cbdaaba7dddd899b</hash>
+        <hash alg="SHA-512">f2f23e9182d3a4e3789f4ad2d6bc5caed50af5f2d031de74ac00222897bc14550eb7c495319d605c4dc04f2597414d969210a0c4bf9d414b8901aa28c914571e</hash>
+        <hash alg="SHA-384">5f0911361672f0d11dd6bc909165be92f9b2bb2bb220e1f1ebf4e9e5081e0b04c8bf20838c0faea9ff2721c5af6457da</hash>
+        <hash alg="SHA3-384">3bfa797fcd84da922835990806aec87a4f88ec344cffdc15681e4042ee7e97b93ab025c7ff4cdd30724e38e08cf7bf58</hash>
+        <hash alg="SHA3-256">0c1f99626d392cfb91db576dc2a36fe0e71910ced8c1b5aea076f885aea04344</hash>
+        <hash alg="SHA3-512">f068718f56bf49c6412843a89596f25503f388f75e90866a709a1a488bef0d84e1765d4431f5c255255643d5c119a37a2a7dfb0ada5e71c2ec1e72aad2d2a0c9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>EPL-2.0</id>
+        </license>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.locationtech.jts/jts-core@1.18.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.locationtech.org/projects/technology.jts/jts-modules/jts-core</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/locationtech/jts/jts-modules/jts-core</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryalgebra-model</name>
+      <version>4.3.8</version>
+      <description>A generic query algebra for RDF queries.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">aa1d575661fb82a5e5059ef0fdb6f746</hash>
+        <hash alg="SHA-1">a58a1467f21965a2667f31a8f8d480d6458061e9</hash>
+        <hash alg="SHA-256">8f63e1a8314f7ce607e97da040b4e5c81fbef0ec867202750c68527dfb8c363e</hash>
+        <hash alg="SHA-512">5aebe73b08b73146a56537903fe9fa044fd81198d68b865a463ad77f22a1a936cb104fc837a2c06b9e3d048ec0fc315d5fa44a63e9623e2a61de90212dd1a0e6</hash>
+        <hash alg="SHA-384">e239539954fbdacae4b3bf9f785a405a87159ffa011d209f5eebc23e60274afe6aa6ef3add539e01ef960053561f023f</hash>
+        <hash alg="SHA3-384">ac2ab680cf8aa1096ffdc890c4de5d945db833e99004e1eface40a1ddf95684f76fed4d15178200e8d55f2473b4f87c6</hash>
+        <hash alg="SHA3-256">b4f79a0189f414ea7d127972f96651e9c1f7608a070a7d092e458ae3e4b7122a</hash>
+        <hash alg="SHA3-512">2e44ad0a5fd68f179dfc55b0b16936f6d3a3fff5fe929a3cc23f6c29ad84c57c24a3c5d7881c0c34822f6605f7d5ed34c170fe8e7ed36250d6240596a6feccd9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-model/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-model</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-sparql@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryparser-sparql</name>
+      <version>4.3.8</version>
+      <description>Query language parser implementation for SPARQL.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">995b8de1b02479a3cd8d47b0fa45c3b6</hash>
+        <hash alg="SHA-1">19fef796b4baeffc0c6fe5742e29080675ea4af5</hash>
+        <hash alg="SHA-256">f7312012a9b020c793ec906a0771c9901b5aa19ab6abb1e9597d9e1f75672be3</hash>
+        <hash alg="SHA-512">cb11731778ebd23372ceb25530659bcf867176bc307cb9b9fa6fa3a0608e3b697789d986d1028dd9c9259c25456ecc1462201fe783e250e125d65fb6cac4ea0d</hash>
+        <hash alg="SHA-384">0baf7c5b1f68903db31736f58cf9d2013da39ffc7e693aa8ddb9f17d935944201f96d25f2b0872c409441ba49d418bdb</hash>
+        <hash alg="SHA3-384">59934af6dafbb045ef59e483a313ad5e27bb277aca2f62cde9d46a6ffc4a8e827bc36503cbd07d7630a746270eb0d03b</hash>
+        <hash alg="SHA3-256">af50046c7c66c2ea34b15bd21531347c43cdefc006b878abebe13a5251bb8e83</hash>
+        <hash alg="SHA3-512">7718f197bb63811003ba2c72c177548b6491b7f78848813fe218eaeb34537d481c6796501f5a935805ee0186126d791bc9c17949243a6b66811f7db205c180a1</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-sparql@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryparser/rdf4j-queryparser-sparql/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryparser/rdf4j-queryparser-sparql</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-trig</name>
+      <version>4.3.8</version>
+      <description>Rio parser and writer implementation for the TriG file format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4eea8a5fc20bc2110428d4ea68485077</hash>
+        <hash alg="SHA-1">48369947e54668c56ae816d446b2888b7bcd4933</hash>
+        <hash alg="SHA-256">5b68537d84296e3ef5d62172410a8a2bc306edbe33756222c430151bf06d32a4</hash>
+        <hash alg="SHA-512">c043857b16d4dd8baa90531ca9cde30083dd07614170f0eb5f2f3c8b712e322c63d4bbf084db199c7ff16d9fa4592c17bc1fd6546f95f7fe4879cbe797a90e76</hash>
+        <hash alg="SHA-384">e578ad263702ef655fede2af204f10b368e797ec831bf61fd99e485a1b835479557de49da259fd76541779752ff694c3</hash>
+        <hash alg="SHA3-384">a4f1280f2393cd0783abef69914d4ee06ea0d91844e5094d95f9274a648a52c49550b336b4db486beba00f48adaf65e3</hash>
+        <hash alg="SHA3-256">0ea9423b9eeca868e33b4cb2a08e7ee647acd47fbcf79705a08d4c99021274ae</hash>
+        <hash alg="SHA3-512">15a0ddcced09821c70342a34a5567512b3ad5c7b84de06b8e9342d86356e5e5f48f2ecb7911beeafa789810aa3aed62bd2cab221a6fe9a719ed51da26232c9b7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-trig/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-trig</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-model</name>
+      <version>4.3.8</version>
+      <description>RDF model implementations.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">fe5475e1dc32d2c76a3a1efff9e92964</hash>
+        <hash alg="SHA-1">8ff157a2092cfbffd8daca08cc4c06affbee7f9a</hash>
+        <hash alg="SHA-256">96fd6d515012fff9b3454ca112edfe377b271fc595f83e1ad35e19e5e69ed984</hash>
+        <hash alg="SHA-512">649568d628a3cbfe364c0c12a9a0d393bc9b393010097542fe0042dc609500a1970f9ab79b76ab28b0d0d25ab6f9721cbd88ed948870e013e71daf332d5daa71</hash>
+        <hash alg="SHA-384">65d5f76a0abffcde55f001577f9cf14a389ad3df9f4fd4ad7766f46d1c766d70aa523a4cb615e0d3b10711bc287d0b04</hash>
+        <hash alg="SHA3-384">fe44068149dd224cf1c93ac2d14e243845c55d5f6cccf975b708372151a6ca9e94007805dc07c922117fdadb194f56fa</hash>
+        <hash alg="SHA3-256">bab96785c7feaea21db8f17177a1ceef7ce3a9ebc846ca1be265662a9d6c1138</hash>
+        <hash alg="SHA3-512">5ba497ba6fa95142e1853d76e0d9b28ebb9949fb502d5c60e4e874bffa4e1a255ebacb189a362372c04da84ee91ed09cd299fc7385a90a691ef8d75f88e129aa</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-model/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-model</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-model-api</name>
+      <version>4.3.8</version>
+      <description>RDF model interfaces.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">c04c4028c09d0faec472990c320fac93</hash>
+        <hash alg="SHA-1">6a8f68f344d2add5fd5291465b33268ef53f99a7</hash>
+        <hash alg="SHA-256">32243eb195ec47d544b74e5c8f8e06d8f61865cbbfdc3f48d19f9b4b3f257f91</hash>
+        <hash alg="SHA-512">18242038b563981a48e94d7f2404c8468aa3b2b1cbe125920ab4fee9dfadeebec7d2ebb5fa06d18e6d94f00b1ecc07edf40a2ae52782651ee91255618bd18735</hash>
+        <hash alg="SHA-384">164574ff30938f94ac4d3c2310d1c934839d07c636d547ee7695972989443fc7af4564ac59e5944b55b18a790b8144e3</hash>
+        <hash alg="SHA3-384">5a8d053393ee1878abdc68552cda28f622b216149e5dc534e4059a804dc99e40af3ba93bb751c9e48215dafcf9029d7d</hash>
+        <hash alg="SHA3-256">cd7a195dca48686bcee49ab678cad4ce366ab78b17de7599314e19e24027ebf6</hash>
+        <hash alg="SHA3-512">56356c58bb224f4141807d3e5414fbf0180598d26a9fcb39716cc251807840a3c1ed2d96e426fc7e93757efab6427475f7d4dc42907666b96392310687ec5d05</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-model-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-model-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-annotation@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-annotation</name>
+      <version>4.3.8</version>
+      <description>RDF4J common annotation classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">dc3209fd68cb8c768220a93e1121ed16</hash>
+        <hash alg="SHA-1">9ef58bb110b7191ab10026f792e2da35652c545b</hash>
+        <hash alg="SHA-256">ed98ecc554c644138fdb19c9b2a346d9360a58854f25838d119ba74c139b5b63</hash>
+        <hash alg="SHA-512">b91b1c55ea926fc39f2b1892851759642d315a34714f9aff2dc1ee0c05aaa0f1e0a0f098aa5f08d5316c6098a1ceac1df3dbd022e107421079cf9a553c73bf54</hash>
+        <hash alg="SHA-384">bade30ee6463adbe4f8bf09113ed9e2c2a3b45a946af55c6eaf4fdf3d9815a86c74ee9c2a5600c548323ea685c26f17a</hash>
+        <hash alg="SHA3-384">5e4576d242ecbf1fcd120b00bb12361bdb78236ea1719b349c2e8caf74e703b32bbfd0d9dedd80c2817aa63f1f854fff</hash>
+        <hash alg="SHA3-256">15eacc96d8bee6a057f9487a18d7a24c6366d7d56535087015f3cfc844b968a7</hash>
+        <hash alg="SHA3-512">0b4fc4dca5662bfe8e106efa8b2e2a41df7f97932c2d5fcafe2c71b367a162f81b1dde8b5a062478f17e5cd6210406399f374ae508acc0c87f25e9aeb2a30dc9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-annotation@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-annotation/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-annotation</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-vocabulary@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-model-vocabulary</name>
+      <version>4.3.8</version>
+      <description>Well-Known RDF vocabularies.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">08dd8e928ac5f89b43398b91406394b9</hash>
+        <hash alg="SHA-1">28622f9330b6ee548383a9b69c5d19f08de17e3c</hash>
+        <hash alg="SHA-256">fbbc59e2a7bc05d0869dc803771daaedcaaa393ef92ae9f9c2ff660cf581d8e1</hash>
+        <hash alg="SHA-512">2dab64e34370e0a2b4d4514e99a7683aa4a5a3003939350434a24be6f15108553af78e59e9861ff2242b434b6bd5bc4bf67d5655e25a029ee6c02823e9a1466d</hash>
+        <hash alg="SHA-384">9042f6064929c048ce3ca56833856d88fb9ac930af9ea7c44ca83c119938a8033009abffa5b930e177516101a5e7219a</hash>
+        <hash alg="SHA3-384">85cfc2443d12ea198d7be941d542fccbefc2b97ffffbf14a3b7f6a412c657bc05b69db92af6174a171f07680e52e7bbb</hash>
+        <hash alg="SHA3-256">e87dba3263eddcd750eec7b1aae73791f67ebba8df8270581067bf88cb40bc03</hash>
+        <hash alg="SHA3-512">51ff0305cf7e56fe044947ef7b2cae7f9d7d661cb777c5c40a1127ee3705ee0d87a0b4b8de5e50f4ea8084bfdcbff607fd072690c9d410c039c69994e29f1cef</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-model-vocabulary@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-model-vocabulary/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-model-vocabulary</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-exception@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-exception</name>
+      <version>4.3.8</version>
+      <description>RDF4J common exception classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">422b20318a2e94edfe1b6e2b1c4ecc7c</hash>
+        <hash alg="SHA-1">d0d630486132c018b3db4a69209609379da9380a</hash>
+        <hash alg="SHA-256">c2b4a310465b624f596a9085f3c3949c871adb18bc9ba95f68cdffe285fa314c</hash>
+        <hash alg="SHA-512">87e3c1f3568b39eb9ebdc33db8241fb80c0ac6551a27b0f14e5444d0c28eca07681f6240b8efb486bb03630a4ffe410f028ac51f7c8129dc12a3220375ae4f7f</hash>
+        <hash alg="SHA-384">d1b330355933a1a13a5f62984989e12083f1074d34a735cf920bc9d52c96cc068ee55b11b0bb0417a78fa509444143c5</hash>
+        <hash alg="SHA3-384">409551a1962713415cc0f8545e91b083e3b9d40df7024914cffdfb6729c7c2c08fae1828be00feea7b3193a2def19ba5</hash>
+        <hash alg="SHA3-256">a188ef35099aeb6c2efc67ac871f4e491f96903210fe7282be3b12cecf92cb3c</hash>
+        <hash alg="SHA3-512">f68c7c010139ec75819434097dd1ab9944d8ab7d38af86cde13595a4c108e0e5c6498d9fb9c61d9e5be76cc6bc8cf90e3127f138687d49254123390de455213b</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-exception@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-exception/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-exception</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-text@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-text</name>
+      <version>4.3.8</version>
+      <description>RDF4J common text classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">380c577edadc4fcdb4c8f3dd596735ef</hash>
+        <hash alg="SHA-1">6d96012737cccbb2a5228c8dbea4deef67d33670</hash>
+        <hash alg="SHA-256">61893265bbd310e21bd379b6e74f0a3d9e0523cb839041f3d496343a3f92133b</hash>
+        <hash alg="SHA-512">d2abd51a3f3cb69e5b294783b52f8d0ce5349d0d95d17c517c7bd31dbbff20d23eab65901accf479f1eca7c92c9753043303a1ea75e2f937bb9b0dbbb9fa8a0c</hash>
+        <hash alg="SHA-384">25e460a3970eb2011d0d6752d94525dfc2da4c0d7794c5c0c84f4ffbb0d1ba968989658026ef81312f7987d41a9f5e43</hash>
+        <hash alg="SHA3-384">82912a58d4f7e329b3d22980db1a82bfb27b69193e865983af2114241cc2423b45604f60d20aaa202701bdaa1803ecd5</hash>
+        <hash alg="SHA3-256">031630a060de18308599f47f5c0a668f6b8819711277fb90e461620f18b3e492</hash>
+        <hash alg="SHA3-512">2f46ebe42882a44fecac10b419fea58d07d6695cf95f07b7a6d6e0c0c428f462b4490c58b0b9f55c8a368ea1472bab5dad28113241a4c55e48af74d318528d4c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-text@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-text/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-text</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-io@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-io</name>
+      <version>4.3.8</version>
+      <description>RDF4J common IO classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">212878d962548578a1d49743ad051ca3</hash>
+        <hash alg="SHA-1">2d3d16990a1b469fd94ce2eb7828632f0c7c6043</hash>
+        <hash alg="SHA-256">1791a826e748273b9675a8f29cd631ac56f0daf056fc5b8c4cf4d21c7cafb941</hash>
+        <hash alg="SHA-512">c72b6e45ab6c8575cb81ce23de46ffbdb8e27a6327891bc15a6dbf802fd3dec3781cea9ab590d4180f425663db9de50d22e15e936225768817abf82af9164a3c</hash>
+        <hash alg="SHA-384">837494f778a9e85d5ac7bf2660382bbc9637408d9b6849c2522ce0b9d19ff1217d89f616558d51f7863e01512e7f946d</hash>
+        <hash alg="SHA3-384">4c3af6cd1bc125263a4050eb3e0238318a8634108ddf148c2bc4b0138636687d730b75476fe02cfde772028d0fa9fd73</hash>
+        <hash alg="SHA3-256">1fbfcfa487802c6de4f190c680e04f4dcb879f46f25e83cec0a9a2c7718a28fc</hash>
+        <hash alg="SHA3-512">02b3799c637258b2839a77f562ffbb638bc7506663cc136b798711590437a64a959b06c65db33c9526d0ddb80023552d8e4d48e43de2b626ecda969a1767e29d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-io@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-io/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-io</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-util@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-util</name>
+      <version>4.3.8</version>
+      <description>RDF4J common utility classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">5da338d22b37e7bf549b1f030874bd73</hash>
+        <hash alg="SHA-1">627370a206cfb1539791331fdb80a6c8181b328b</hash>
+        <hash alg="SHA-256">df11dc9de3c95ec3fa9159a3e5aae4dea3e7840976dccb996a6551585fde1c1b</hash>
+        <hash alg="SHA-512">80b56872ef52f106468090494179bd168322508df2490e7d645bdfc65dfdae8c5d24703a089f8935e36a63302d68f94101c7974151d6e81b5798c9a77bebf7c3</hash>
+        <hash alg="SHA-384">48b7fb778bc96da2761d8e4e40c7ace753a2bf6d08503fff558d94c47e19a8a2b8270fe851755bf53ff8d4676db1b1fc</hash>
+        <hash alg="SHA3-384">f915a1a2bb4cb5d2014b15e077c9627b74a561ebf9e07b5803711810e57a28f4a644aa1a86c7456a3f3b2c51648f9f29</hash>
+        <hash alg="SHA3-256">aa97f5da44ab68cb80e00b3c7c8653a28cb667a0babf3c86abe4cc6cdf8835fd</hash>
+        <hash alg="SHA3-512">f71eecb676e5d2aeb4e7049e80bced230cdf984d35d70d8b2d7f9dfec8ca879952c99c882c733f698cc3005c5b30ab0b8c360f7b905046d4efc59a58d082e527</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-util@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-util/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-util</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-repository-api</name>
+      <version>4.3.8</version>
+      <description>API for interacting with repositories of RDF data.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">5445a3ddf1cd1ad2f3f7a5f000fc12c1</hash>
+        <hash alg="SHA-1">c90755cf280086fdfc37ca287bdb15f06d7aea80</hash>
+        <hash alg="SHA-256">312070a0da92ce6b97a67e49671ec2e3f6787d8457b3e7274e3a52d50afd8757</hash>
+        <hash alg="SHA-512">4f11878b762006658a854fccee3c9232df2aefab6f41ae06cc721aabda765cdac1459e856ace9585f03797f8fe11a1f892fe2a8353e65c80354c99a3b6752706</hash>
+        <hash alg="SHA-384">eaa769caf5388635294883f81560a4150cd40eb62d04f9ca8ae1a94c7f9efc1c393fbeb7b915d49ae981b5ec5bd40427</hash>
+        <hash alg="SHA3-384">b688ffdde3e5c18041fbdc6355cae743892265059241c8281aaf4323385c4791cb15229c8656f2a224be38eb0f2e3a1f</hash>
+        <hash alg="SHA3-256">05ede17c0f6c03b1a8d138dec4bbc6997939c8f8a27624eb053a200689f54ffe</hash>
+        <hash alg="SHA3-512">107429267e26f01775c4c2cd957184c110cd082ca2362b34b8b763d6f847ca16dfd48b771be66fe16fbba416fe0d13c60d3f6ff89d30983bf4f2f8851d2b9e6f</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-repository/rdf4j-repository-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-repository/rdf4j-repository-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-transaction</name>
+      <version>4.3.8</version>
+      <description>RDF4J common transaction classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">fe4883ba8b3802b769eb5ad51c8eaf07</hash>
+        <hash alg="SHA-1">746e65fa5d05a5dd538f62689fdbac6e7c0c0566</hash>
+        <hash alg="SHA-256">9682bae30d58d5a8be13d521afbe810d0138ffa32a6496c02a92441916b926e0</hash>
+        <hash alg="SHA-512">a3a6c90d455343136c3cdc841f5245aac3445098203a65e17fc0d6699678f0cdca45b3eda09f3c754f14256d26c0b4c84db30c818b1f11ae229fcccde8fa6f7e</hash>
+        <hash alg="SHA-384">20426991cf8712d76bf87fc46c9f27b309203c9aa2c0702eec6081306b7577e4829522563441958548f9e2a21de3e656</hash>
+        <hash alg="SHA3-384">52deb0eb1dac663ce2c1596b152ccd1f87ada14e0f476e0022c8e4f306f19b47e003cec7520b8690d61e39cb1b6898c2</hash>
+        <hash alg="SHA3-256">65e9ed4b3ccb6c7b9e48bd2fa8db995840764bd6e5be2948dfc4aa66dcb8b3b7</hash>
+        <hash alg="SHA3-512">5966d191a1e8b9627cc5f6135ffc32d8fb2d4597fba4a10aedba9e540dceb4fdbbf8ad36a4e061355ba5f82f06cd37d55e263e15c8d2a435c824004b9b312c13</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-transaction/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-transaction</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar">
+      <publisher>reactor</publisher>
+      <group>io.projectreactor</group>
+      <name>reactor-core</name>
+      <version>3.6.0</version>
+      <description>Non-Blocking Reactive Foundation for the JVM</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">a8abf82c595fa25c746afc8102b6c91e</hash>
+        <hash alg="SHA-1">ac8c6923f46c0dff079133e010f0aa3132ccf1c2</hash>
+        <hash alg="SHA-256">1b37779edf618eb526d27986329740fa5c25c61568ca812812d0cca127ceeac1</hash>
+        <hash alg="SHA-512">176142287d930fd367cc3dcb6562929427a9f39ac2552c28a71ae7daadf3c07cfe260134f8f4d3bdaae7f6abfbd4b45e37f9c630db8421da98d0152994daefa9</hash>
+        <hash alg="SHA-384">45935830255dd4157cb63a27b50d2fb53acfa3c557b036e50efc8fd90f038eb4549e9919350953e398c8989a531883f7</hash>
+        <hash alg="SHA3-384">789a52ebd34189fa3c2abf85b90d470e48e4b1454da251db1a29e325c8843ab6d22d1f780a89c6eaf72363e84104c064</hash>
+        <hash alg="SHA3-256">18d56d72d551b98295d9436694939a3247a6eb2eac86820bf37b8e1453b9563c</hash>
+        <hash alg="SHA3-512">e97951151b4b309dc8fbce272cf4c8ef15318acd14bdbaaddd53081ac9ab3fbe6674199e0b2bef70d53a75bb6304d648b79387180d3c7f084731d5a36bccb2af</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/reactor/reactor-core</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/reactor/reactor-core/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/reactor/reactor-core</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar">
+      <group>org.reactivestreams</group>
+      <name>reactive-streams</name>
+      <version>1.0.4</version>
+      <description>A Protocol for Asynchronous Non-Blocking Data Sequence</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">eda7978509c32d99166745cc144c99cd</hash>
+        <hash alg="SHA-1">3864a1320d97d7b045f729a326e1e077661f31b7</hash>
+        <hash alg="SHA-256">f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28</hash>
+        <hash alg="SHA-512">cdab6bd156f39106cd6bbfd47df1f4b0a89dc4aa28c68c31ef12a463193c688897e415f01b8d7f0d487b0e6b5bd2f19044bf8605704b024f26d6aa1f4f9a2471</hash>
+        <hash alg="SHA-384">ce787a93e3993dca02d7ccb8a65b2922bc94bfaf5a521ffb5567300a9abc3c222ebbfffed28f5219934ceb3da5b3e9c8</hash>
+        <hash alg="SHA3-384">68daf9498232897989ee91c1ad47c28796c028658cfe023c2907152cd64ac303a3bd961e5d33d952be7441bee7ff5f14</hash>
+        <hash alg="SHA3-256">0c2165ea39330d7cccf05aa60067dc8562a15db7f23690c8d4fc71cd3e49fdd8</hash>
+        <hash alg="SHA3-512">19c2d866a6c4d7c61ceb63d3b98324928eac880c8f23d84202c1145b4779438b1b275f1d20c74b06ecb0fbfe83baaecce3b4366ead0f7cc8b7b6916a8910c944</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT-0</id>
+          <url>https://github.com/aws/mit-0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.reactive-streams.org/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar">
+      <publisher>QOS.ch</publisher>
+      <group>org.slf4j</group>
+      <name>slf4j-api</name>
+      <version>2.0.9</version>
+      <description>The slf4j API</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">45630e54b0f0ac2b3c80462515ad8fda</hash>
+        <hash alg="SHA-1">7cf2726fdcfbc8610f9a71fb3ed639871f315340</hash>
+        <hash alg="SHA-256">0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c</hash>
+        <hash alg="SHA-512">069e6ddce79617e37d61758120c7e68348ee62f255781948937f7bec3058e46244026d7f6a11e90fbc15cd4288c4bb1acee4f242af521c721a9e68a05e64d526</hash>
+        <hash alg="SHA-384">fd6f7ad85d02ac63cd1a586c8bb158c1fc000495f512f097731ea9f749b5da2637615b821294962805ba312c738f40aa</hash>
+        <hash alg="SHA3-384">17cd61f59a162250b52a89c7c56eb60da253b776210500313c7b82744483ff84717946f969251fb4d76f9bb12a2458fe</hash>
+        <hash alg="SHA3-256">9dcb04582c64c79e788f9191195834ec75bb3457133d22a176a0ccb069b97103</hash>
+        <hash alg="SHA3-512">990faffa454598a3fa82affe30f1323db769d2e1fff20d9c7163ef6fd95ac7a0874c06a634207a2eaed9e5afbdee68b225138fc75018717ba97efe3ffe92c88a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.slf4j.org</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.antlr/antlr4-runtime@4.13.1?type=jar">
+      <publisher>ANTLR</publisher>
+      <group>org.antlr</group>
+      <name>antlr4-runtime</name>
+      <version>4.13.1</version>
+      <description>The ANTLR 4 Runtime</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">dd465ddb2a8dbf69eb6c94e69a0d5f0f</hash>
+        <hash alg="SHA-1">17125bae1d965624e265ef49552f6465a2bfa307</hash>
+        <hash alg="SHA-256">54665d2838cc66458343468efc539e454fc95b46a8a04b13c6ac43fc9be63505</hash>
+        <hash alg="SHA-512">63eb51bfcee49c52848d8b7c3c46d8b4d367d85fb3c3db7175eaacba94e4d0c227b78e5955a0e86e575e1c6206fc2a43e5fa96fb04ad7c16e24ec94015cfc18b</hash>
+        <hash alg="SHA-384">9e5e022d1eff5870f53e0e17d09d737eebb5b859c3403e78308af4616a86cde0830842b81a389ac4a0df871fb1032124</hash>
+        <hash alg="SHA3-384">20f3a927369f6bfd94bd8b244e0e9330d4438736414c403b712098f6aad9a1140bc17333cacf194f1b9e99c0f62ffdfa</hash>
+        <hash alg="SHA3-256">5696b3e757e6135c1aa56452b86ff0456425d13b97b33ace3f4d3dc6c752c4b6</hash>
+        <hash alg="SHA3-512">33251a06eaeaa56f274548e47b405cce279a9e54e34d65bc382d2482887bd470e5080da4f75c221658c3e70aea79e748bd0a3f47e49e37805174e23f71747b92</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+          <url>https://opensource.org/licenses/BSD-3-Clause</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.antlr/antlr4-runtime@4.13.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://www.antlr.org/antlr4-runtime/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/antlr/antlr4/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://groups.google.com/forum/?fromgroups#!forum/antlr-discussion</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/antlr/antlr4/tree/master/antlr4-runtime</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-databind</name>
+      <version>2.17.0</version>
+      <description>General data-binding functionality for Jackson: works on core streaming API</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">09dd83868b44c6a3dc48911f4b3bbbc1</hash>
+        <hash alg="SHA-1">7173e9e1d4bc6d7ca03bc4eeedcd548b8b580b34</hash>
+        <hash alg="SHA-256">d0ed5b54cb1b0bbb0828e24ce752a43a006dc188b34e3a4ae3238acc7b637418</hash>
+        <hash alg="SHA-512">c6b06d4b20941d9e32b462552031e6c98378e5edce57693e55adcc73cf7d5088af5b3a666a59e94a7f0b57066ac694863919f398f28ee0d7ceb362c8c05f7491</hash>
+        <hash alg="SHA-384">02875865ef42573114755ab7147d64f8e5a791f2a2b8debe51dda22886370ef34af8c159d8efa8b90735f33f90089187</hash>
+        <hash alg="SHA3-384">ee93411dc73337c11d48609fbf79ae606ccd0ab712e3d2c12c91103964182910a810b9fa062a0afc47d19c720c97c5e7</hash>
+        <hash alg="SHA3-256">eb5b5dfb8afb2538a2c31caab47d909970bb647763a0eccabaae8e6f0a9ad988</hash>
+        <hash alg="SHA3-512">09ce7a8d928d42b221e0f6151653248f78eb68b6228cfc36fabd48ae48a3890f235fb33b82cc2faa24069efdf5a14d7433014e3bfb0d5173047d1911e5a55fe4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-databind/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-databind</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-annotations</name>
+      <version>2.17.0</version>
+      <description>Core annotations used for value types, used by Jackson data binding package.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">7529e022796db72bc17288e950c24b3f</hash>
+        <hash alg="SHA-1">880a742337010da4c851f843d8cac150e22dff9f</hash>
+        <hash alg="SHA-256">8562569a001d46e84ea23802257e33c8f68b24eb47c1e0efd133a0372c512959</hash>
+        <hash alg="SHA-512">20104840da168653b27ffcbef6600d29d04b7f315934531f6521b30cfc0438893ac5e3b2476ba03a6a47f3aed8882cc7d5a57b66163ad19aac217a258826e51b</hash>
+        <hash alg="SHA-384">c597370368f411e8f63500537a94f503f44f3bbd653c77d39871eb65745ee2a3d8d83bb8c303790c1e26f30e76219000</hash>
+        <hash alg="SHA3-384">6c446264fac7209fc435be283dbb6d578ed7328e84756d7e987a0871a9119bf9bffbfe40827e84324ea7924f83aad770</hash>
+        <hash alg="SHA3-256">437fa185a964c155377819fed79558491f31a7ee20a60c4624d252f6c6bf75bc</hash>
+        <hash alg="SHA3-512">ad18bc120cfafe0ee6c961c5422242361de7b3154d3252a2ffaecf5d981865c141a25fa8706709eabc351d42f3593dd2832219657671f21d9672c2488e5d1bf4</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-annotations/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-annotations</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar">
+      <publisher>FasterXML</publisher>
+      <group>com.fasterxml.jackson.core</group>
+      <name>jackson-core</name>
+      <version>2.17.0</version>
+      <description>Core Jackson processing abstractions (aka Streaming API), implementation for JSON</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">3e4b82b6e29693927dd289a344c35e46</hash>
+        <hash alg="SHA-1">a6e5058ef9720623c517252d17162f845306ff3a</hash>
+        <hash alg="SHA-256">55be130f6a68038088a261856c4e383ce79957a0fc1a29ecb213a9efd6ef4389</hash>
+        <hash alg="SHA-512">85611fb7687450eb6078855c46d94dabf1cebcf179e23455cd1069aaded3b169112ec5d3d8d8510a7076166dc146e2f684f8527c5ef5b9ed99a7ec91f0825523</hash>
+        <hash alg="SHA-384">12bbfe5721ecd374a77ede24cca8a39f1415fd50dd95938c5e3365c703a02b5f6c0e7b10c7b44b7c9c5a874dd0b971c7</hash>
+        <hash alg="SHA3-384">d1b1f9c3e53603ccc690d76ac1a90dd1ddf07723f4eb53f58acfa266f17a675b311b0f29b94d9f1bb0ab32ad1a8aea4a</hash>
+        <hash alg="SHA3-256">62a76265cdc48c8a7f80c9d5566a179bd796c646b25c5cb937fd0a10cfffff1f</hash>
+        <hash alg="SHA3-512">87c42bea365905e9d877bda162c9d79d962a969a53a46861c350b9a9a87d09f4986c6ff67c4f00eba6df8c86f0621cfb52359a91321ace7eec3bb5d7c82feeb9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/FasterXML/jackson-core</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/FasterXML/jackson-core/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/FasterXML/jackson-core</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/net.bytebuddy/byte-buddy@1.14.9?type=jar">
+      <group>net.bytebuddy</group>
+      <name>byte-buddy</name>
+      <version>1.14.9</version>
+      <description>Byte Buddy is a Java library for creating Java classes at run time.
+        This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">48280c1c2676e942863de9b01e9cb03b</hash>
+        <hash alg="SHA-1">b69e7fff6c473d3ed2b489cdfd673a091fd94226</hash>
+        <hash alg="SHA-256">377352e253282bf86f731ac90ed88348e8f40a63ce033c00a85982de7e790e6f</hash>
+        <hash alg="SHA-512">4d9f08b79dbd4a0e1ff27e4c12490b6b41e1f796b19217e6d2f8b7bf35a3545aef4e0e711b3396c32c23a8dba0412e9ebf29de21b234d29ee57741043e4ef191</hash>
+        <hash alg="SHA-384">e22adb52c0dcf4f3d6027d7026daa9796ad193142e8d6c078497221b267bb68c06d2c303601d90cc6def1c95ef205ee5</hash>
+        <hash alg="SHA3-384">1978130040f2529e3057c25b0d54272da60ef2183b2f2f79e6ddfe526c0f511524abb8cc098a3f5fb7e7065d295bf233</hash>
+        <hash alg="SHA3-256">5ab8f6531cc3177fe46e8e9414912655ea02b353d6a632da3c6a97857cda7377</hash>
+        <hash alg="SHA3-512">921cdd84cdb7035434104ed7cb54044a8c9b3606ca3af33e480366377195abfd892767970cedda1f8537d612ae649f01a5f8ab3527c7a15097d4c1cb2b4c1e58</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/net.bytebuddy/byte-buddy@1.14.9?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://bytebuddy.net/byte-buddy</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/raphw/byte-buddy/issues</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-nquads</name>
+      <version>4.3.8</version>
+      <description>Rio parser and writer implementation for the N-Quads file format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">a62ba4e51aa1d6d4d327db8a16f06fb8</hash>
+        <hash alg="SHA-1">0e340d1330ca3bede59961027cda5f98c6021c72</hash>
+        <hash alg="SHA-256">6645cfbfda189c20f318b0367982a6f390e6eb89397c78743f70fa4a8a1fcae7</hash>
+        <hash alg="SHA-512">fddaddfabb4bc014cb16674c9b12de5b033383b372f5fdc708014e2e2e38bcfc58b54d10572bbaedac01f5a3778ded51838555ac3f4c464e22013311dfbd5581</hash>
+        <hash alg="SHA-384">814874922c9e63b3aa3023640075198b8a58600b24b5be22f4e966f91ca7102cd223d88bc33fc9df2cac98ddec6dc5cd</hash>
+        <hash alg="SHA3-384">3fc6467f2d3200a12696107860acce9dd3fed3463a3de1c98adfe46456db29fc49c62cf5bbcdff52830e5616e7eaa53c</hash>
+        <hash alg="SHA3-256">52694f9e9388ca7172afad197e1d3b31319d0288d0d028d4ff0fc0a46372733e</hash>
+        <hash alg="SHA3-512">7dc704685bb109b8fde1a4b7409ea8fe1a613ec61d260da981177208b331b50e0b4baf7f4b8c58e25a44379824d5862b10d5fc96bf64a331d8b3fcb188108dc0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-nquads/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-nquads</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-ntriples</name>
+      <version>4.3.8</version>
+      <description>Rio parser and writer implementation for the N-Triples file format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">fe6d050dfee10ec9271bff5e8077f126</hash>
+        <hash alg="SHA-1">acba337d13f010f7777157e54810e913d9ffedba</hash>
+        <hash alg="SHA-256">1b6499229e0bf9ab4a7a6014337f417752787fb6933a6b4e4f335a7734954d59</hash>
+        <hash alg="SHA-512">f5b2fe9fdaa9b9cd61388ab96aaa14d0ef71f4d3ba5a81e7f8ae2d9a0417e49d1a450e44ba589206423e12bbd1ae3ef997c40112e3b5678f6201fb603ca99774</hash>
+        <hash alg="SHA-384">aaf0755a5b4d265ec5b4d0f876f4327aa5d3a20fab514488f182cb3b9ea0b217c2ee5506a26daade7446f9600e0186bd</hash>
+        <hash alg="SHA3-384">f1e5a4e54283d28e76d2e8fad8fcf2a575cea911f3fde1eb7dbcd124380b51e3f981585c6c07a5a865a174aee395f3c4</hash>
+        <hash alg="SHA3-256">3f51c1c0608d696ceed08f47cd2d4f6456c695d27d7cfc1eb537b0c775870606</hash>
+        <hash alg="SHA3-512">6cb6e3ae9fea93f30566084de9bcd061796999779b62ccdbdd4ab300154ed824ecb000da09ef862115099a7af6146f4eb7a894351ff6699c3b6a533b348c95fa</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-ntriples/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-ntriples</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-datatypes</name>
+      <version>4.3.8</version>
+      <description>Rio Datatype handler implementations.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">a600362eaeee822fa2ef96d8ca9faa37</hash>
+        <hash alg="SHA-1">471fc6b1b35f2906a8385cbbe18c983fd5143535</hash>
+        <hash alg="SHA-256">a0a93d09ba1513ce4c972ffd03e791a2b632c6b3700e11f522332ca118519b0b</hash>
+        <hash alg="SHA-512">94732032f2ed6669bde6e5b1385fb208d69eb24cf3268edbc23e5d004d9d262f936e41f72b900261d785f739f85aefa7cfb1d483afeb86f76fb5ee285fca22c5</hash>
+        <hash alg="SHA-384">2dbab436e9548f39710c8a21b13ba9b32d353842950c7bcbf14eaeacdfd75b49599044ee7eef2142827a1e6fa07b98ff</hash>
+        <hash alg="SHA3-384">62d9cc207115d8a6d26dfe9cf6dbb177c4cbcdc329fe871d55b3ab5ab890ec78fab127aecad9ba503dc238f27b5e85b9</hash>
+        <hash alg="SHA3-256">2e2ef61cb0c30b2a242f34e4bc3621b3df182f338420ea61ea5a22726651349b</hash>
+        <hash alg="SHA3-512">449aa2ca45a4ed59d829062281f7333cde98d0c229470b8ea53abe6fe86f3a35c02d3e7a202626199cddaeef9300583ebd7ffb05a47f65af31b7a74cee325150</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-datatypes/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-datatypes</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-languages</name>
+      <version>4.3.8</version>
+      <description>Rio Language handler implementations.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">06de3d948427a84998c632ee8abe71c2</hash>
+        <hash alg="SHA-1">8c5de8b2fd60314e962de4ca1fd3eb58dc2fcf3e</hash>
+        <hash alg="SHA-256">397baf45e24bda60a82525516987956df598d53c88ab0c30b58d70e0ed7e0249</hash>
+        <hash alg="SHA-512">2ba38df76012031e6a48fde78a1a679ff943d32c5c8c037531dd8036f286d7b98565cc02cd274782ac8bf5cd4f804443606c5fc5dbf925d7f21a64742d8376ed</hash>
+        <hash alg="SHA-384">6f52478d6413f27684f48c8c78cfd3f21ecdf8178576f138f8475e52555f6d7f4891c0b0b22709bdadf970f0d796ae8f</hash>
+        <hash alg="SHA3-384">dd0e856b4933490ff1194918958bcc329ccb72deed60ab71526d52d52406678c1ebe1682ffa8a0b9969d24201f5a06e9</hash>
+        <hash alg="SHA3-256">70b8bddbfbfb976bd6a937f050c4dc8f8500311263348a3159d666deca34cd21</hash>
+        <hash alg="SHA3-512">01475cc4189a8139e464e0f81674c2974e77ae056d2163abee6d53ceea34d9857a2fd71a647428d55649927aa96aa05360512e79bb47e344a1bed9f24ccb6bd7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-languages/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-languages</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>commons-io</group>
+      <name>commons-io</name>
+      <version>2.11.0</version>
+      <description>The Apache Commons IO library contains utility classes, stream implementations, file filters,
+file comparators, endian transformation classes, and much more.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">3b4b7ccfaeceeac240b804839ee1a1ca</hash>
+        <hash alg="SHA-1">a2503f302b11ebde7ebc3df41daebe0e4eea3689</hash>
+        <hash alg="SHA-256">961b2f6d87dbacc5d54abf45ab7a6e2495f89b75598962d8c723cea9bc210908</hash>
+        <hash alg="SHA-512">5bd78eed456ede30119319c5bed8e3e4c443b6fd7bdb3a7a5686647bd83094d0c3e2832a7575cfb60e4ef25f08106b93476939d3adcfecf5533cc030b3039e10</hash>
+        <hash alg="SHA-384">114f1e324d90ad887c177876d410f5787a8e8da6c48d4b2862d365802c0efded3a88cb24046976bf6276cadad3712f0f</hash>
+        <hash alg="SHA3-384">80288c03ad4d80d69f91d056ffc5570d49a9c76bf54ad2dff0121ecde26a560df76d05156f281f5c6db2a38ff07a873d</hash>
+        <hash alg="SHA3-256">5adfb5ccaf5f21a549422f426118a9542673926fcd18c68390cf813e791dcf6c</hash>
+        <hash alg="SHA3-512">7573f47f0babb53cefdc7c2309a0b982d800139064537b0797da442853d081010ad7c3c74a500598a0f800639a5d540eca21963ea652c68613907059bd4278c2</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/commons-io/commons-io@2.11.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-io/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://builds.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://issues.apache.org/jira/browse/IO</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://gitbox.apache.org/repos/asf?p=commons-io.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-storage-spi</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Pluggable persistence interfaces and shared contracts for CQELS</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">7642ea33c9423ef806328b4622c0e4c2</hash>
+        <hash alg="SHA-1">147132fb3055ca2f95cd9145af6d817d25dd29b0</hash>
+        <hash alg="SHA-256">993565a2ff30d0baac1afb6e59d61f0f1aae76f13ec3032ba652bf1d701a0e0f</hash>
+        <hash alg="SHA-512">1181c62df715cd0cba22c0b7bb0e9bbe7e8ad2e1647a78c2698ddea5dc166b4540eae49bf8f45fd7fc79f5d6e7a5fa0f1bb591537e31ad0b2a4368bbb6dedf05</hash>
+        <hash alg="SHA-384">576c4e34da0fd8c3d3ca4aa326b876a048468179dafcfebaf5211f184dc70ce9c45c0cf50f562687c66c6a0dcc2b6326</hash>
+        <hash alg="SHA3-384">d6689167f5117b9e4daf951bce580c5f461ef4d560ddddc9cf22be6fccde12985528ec4d44b5b219f04d77a5adca3284</hash>
+        <hash alg="SHA3-256">23f52a9b81a79dc51d98dcde0f609ea4c40370d514c8e71c6e89f83fef82b7bd</hash>
+        <hash alg="SHA3-512">9f2073a84bb03a1e0d6140425c3a76e333712d977cd7083faef02e823a9ff71be2e69d191959c60992d507f06bb617a332a04df3a5596d4f2db85a913cbdd275</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-storage-spi</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-shacl@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-shacl</name>
+      <version>2.0.0-alpha.16</version>
+      <description>SHACL validation and repair suggestions over CQELS streams using ASP</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">f48e79b4b364bd5f79e59d6e8c6b4674</hash>
+        <hash alg="SHA-1">27aaccccb43ce4e650a054ae634cf6fc152d7081</hash>
+        <hash alg="SHA-256">13c7339e728084c5f3a25510544e5b8c0d7935006057352e2aae223aa4dca9b8</hash>
+        <hash alg="SHA-512">d905c6683d6cc3a87f4fdea155bf610b2660543bb8dc4fc0a92214cb02b9ee28f64b19d5ab72f51d96c749500a50444c59a13e4602382042f005d4c31cd1dda7</hash>
+        <hash alg="SHA-384">43e688002165a736fa3aeb48efbf3b9d1e69dc3c889a61eba79cb63f63a08ea309fb1998df396c585afb20a12cab6328</hash>
+        <hash alg="SHA3-384">d8712128fa51c764ef21fbd5375b79e54464138299ce5970ac7617f821c9812c0793ed9f173f8bc9f5aa4bff87d91e80</hash>
+        <hash alg="SHA3-256">f3f54e0954d8f81c0696f52cb73b0fa7331516d334b7eb38d9cc38c02fe11fec</hash>
+        <hash alg="SHA3-512">9e8ce5906ec8f57c2e371fce375fb0507fb077a8e2d329df473d708c81764fad934b7293e5161cab1a345664681d528fe9a308f3ab80310bef89f120572d0cb3</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-shacl@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-shacl</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-reasoning@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-reasoning</name>
+      <version>2.0.0-alpha.16</version>
+      <description>Streaming RDF reasoning module for CQELS</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">d91f9dd247d3e994fa7afe74a2f2386d</hash>
+        <hash alg="SHA-1">726125291ae212043c5f49d538c560cc6500d362</hash>
+        <hash alg="SHA-256">2bf139dec7fe44d375c31151e020fe8ab23df2e2a823f0c3cf20f891570d22c0</hash>
+        <hash alg="SHA-512">25165a00e8c305da2580a88014ebc01ca489466b29d55aa6057d81dbcb81f18cb1997ff6eb711672b935ab19e910d6ddbe4561310e7904a77558bb6f01239570</hash>
+        <hash alg="SHA-384">d2f5e98125f1c532e88d13e4d733c9355a7ab523522ed401b188a903ad38c74f16527c9ff1d82c4773d2e3f7e388449d</hash>
+        <hash alg="SHA3-384">bbff5739876e05b6f52d4ae4783ce27c86039125a05d8d49245579728ed4d6f022c3e08beab9d4e1f581557be83371e1</hash>
+        <hash alg="SHA3-256">a200c7e5bc7f1967b0eca607b057996f371a4fc1740306e52cc24c25f30875d7</hash>
+        <hash alg="SHA3-512">da8358f640aaac220db29293669dfe20cb35ab74ff67ab414cd0461921da57d11f790626b76e6c3769edbf012b7b78fb8741d1eb6f3c7b1dd5bdf4501d9be667</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-reasoning@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-reasoning</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-api</name>
+      <version>4.3.8</version>
+      <description>Rio API.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">e14e7427c415fe6388201aa20d028023</hash>
+        <hash alg="SHA-1">44f2bc04a5d9810a9b2dd73682312a05f129f216</hash>
+        <hash alg="SHA-256">bc6bbf25728a05d4412a96c826d6df7a97160c61510e9b8f4251f18b53a01378</hash>
+        <hash alg="SHA-512">9f022214e23fb9296068e1ea9571eee641ae3e0308408eb2ce0464cd1d0580961deb0cc612c5ea03e61b49bf60e91690dfca68f1c31e0940f567a15ce754ac4a</hash>
+        <hash alg="SHA-384">805a8a66ee4dd59ae2ec1e72b6d2386f23782d58acdb09fbcb22779fc8cf73cc8db8fc538e3252449544d503ebd0e735</hash>
+        <hash alg="SHA3-384">d522e0bace79ec34261ca835de2ff53039cd63a7e9f2629939f12851658fe737f484dbf9e7e464da8d1bc65b6eb75f2b</hash>
+        <hash alg="SHA3-256">37be4986284f6c520a70657e0154a814c231dd3292f0ed754f62e2d720171d81</hash>
+        <hash alg="SHA3-512">74ae7cef88a05ba0b8e08aaf630cfbd714c336ddc412fafb270a0108d23bab1dfcaa737fa715a0243e0acd1707f203034541b1ab24803519902124425d1fab19</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-xml</name>
+      <version>4.3.8</version>
+      <description>RDF4J common XML classes</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">6e5b860773a4ab008928108f21771ed9</hash>
+        <hash alg="SHA-1">6805f3d1fd9648f52c981d3141106144b750f674</hash>
+        <hash alg="SHA-256">55e254c952cb407104c6accafb4c54e87280f99a5e013bef151b8fc44360c5cd</hash>
+        <hash alg="SHA-512">adb3a3cede5fbc82dcff198e00088b9af842b4cee4ae0aa50e34037d6f74e91e033d90b5bf65a58f84b20de48feca1b694339d3777ba1e22ff5f58e93061e194</hash>
+        <hash alg="SHA-384">ccd9106e125f1b52d83b24726dded566cf897d1ce4bc3bde8804324a1eccd5930b42a03175c83744bf57042f641a39d4</hash>
+        <hash alg="SHA3-384">e6e0c499d1ddfe9173e421e658b5850def4e7737392449241562a3b836ab8aa62f870c87b411cae09578f682fd61ec0d</hash>
+        <hash alg="SHA3-256">ea4aa5bfd2ae28ae44ba2fbbc3d42954916d68322ae5b748d1432c16b6bd4c42</hash>
+        <hash alg="SHA3-512">7e81a93a399c78411939cf2de7e1dec85c14585221eecca28249eadbb57c21fb20549a44b103ad05a66c09a1b4ae8f174278fcf26c05481f46fc59be177d4701</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-xml/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-xml</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>commons-codec</group>
+      <name>commons-codec</name>
+      <version>1.15</version>
+      <description>The Apache Commons Codec package contains simple encoder and decoders for
+     various formats such as Base64 and Hexadecimal.  In addition to these
+     widely used encoders and decoders, the codec package also maintains a
+     collection of phonetic encoding utilities.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">303baf002ce6d382198090aedd9d79a2</hash>
+        <hash alg="SHA-1">49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d</hash>
+        <hash alg="SHA-256">b3e9f6d63a790109bf0d056611fbed1cf69055826defeb9894a71369d246ed63</hash>
+        <hash alg="SHA-512">da30a716770795fce390e4dd340a8b728f220c6572383ffef55bd5839655d5611fcc06128b2144f6cdcb36f53072a12ec80b04afee787665e7ad0b6e888a6787</hash>
+        <hash alg="SHA-384">05d0506283716472175d44c2a4766523397bf8a007c18848f9c9a61718cc8aa437f9cb4b91771037ab29a960860b62a0</hash>
+        <hash alg="SHA3-384">12fad4ef78274b06f97b1243cea6f970088abde082d2de9377d915a34b44f7d7d67807c03e59c849b69f1544e2a9a1be</hash>
+        <hash alg="SHA3-256">87be248f33f241121f54aad61a9a460a79eabefbf1b5b0dd22aeb95b581f727e</hash>
+        <hash alg="SHA3-512">8c992c9c569ebaa0bf956a4c5b34fbf5e1ed1c212c2dd896fa216183ee0bcd341e96698af4b9cec7e8880762faa081a3d3a27f51349aa457cb8e373e4f57c788</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/commons-codec/commons-codec@1.15?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-codec/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://builds.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://issues.apache.org/jira/browse/CODEC</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/commons-codec</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.github.jsonld-java/jsonld-java@0.13.4?type=jar">
+      <group>com.github.jsonld-java</group>
+      <name>jsonld-java</name>
+      <version>0.13.4</version>
+      <description>Json-LD core implementation</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">3e4121f6317a6c73733712f06bdd3983</hash>
+        <hash alg="SHA-1">206e302e18e4e1f5c723a90764e50c7eef954887</hash>
+        <hash alg="SHA-256">d8101c31cb4d6d07e87f03855c32ed67dbf29174b1a1a3a38cff8246290d3dcf</hash>
+        <hash alg="SHA-512">d119424590bd437a63fc37ec239926a3c19830fafde1c7692bc5506880edd4f895aa46ccc3e6935f3729dcfceab5eeb74d0074719168ee183f427bac2ccbef35</hash>
+        <hash alg="SHA-384">20a79f2ec3fb03f0e203fd248f9be61335c0d66eeae4f0d9280cfd27054eedde85cd718db001d590c890bcc646e28f5a</hash>
+        <hash alg="SHA3-384">622b95b94319bbea0afd5b93ac6876e54372265fac75d10ce4f6343fbf9d517dafce2acf4273f5f6da14d2f395579442</hash>
+        <hash alg="SHA3-256">28a991bf107e4f43de26c639e1efd1426e912cceccc5d703c975694b66ddf4a1</hash>
+        <hash alg="SHA3-512">e43dd6e67fd2f4c8421b3e9fc4975494331acd6e02cfea87cd3267dd28382dd54d858d843c25209efb24f518803f5325aae000531d968a19f9efa7d053d05728</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.github.jsonld-java/jsonld-java@0.13.4?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://github.com/jsonld-java/jsonld-java/jsonld-java/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-rio-turtle</name>
+      <version>4.3.8</version>
+      <description>Rio parser and writer implementation for the Turtle file format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">926c08e4bf8a4c0739b69f3f5024226a</hash>
+        <hash alg="SHA-1">f2da81e3f9c44f3e0c17d68d3b2c0df9d8e381a4</hash>
+        <hash alg="SHA-256">49dad28932eb04bec61b6b6d4f5aecc9eb776a35fe7c09367332a0824cd0f4b6</hash>
+        <hash alg="SHA-512">14070dfe57b89fea25a5372fbcedb90e709eeb92989677633f9085c43055e63e3d1bfd0e549fdfb7fecd3dbf2afa7666617d15dc76b600c5caf1e8e0eca166be</hash>
+        <hash alg="SHA-384">98a23b69c1756d796eb8f5f656838047f3198878b2b4c40a75914367efe70094c200b1990b17b4c6aa73413fa4550690</hash>
+        <hash alg="SHA3-384">11a37e2d1dd22b0e439821842d5685c3aedd36cbeff5229d9f8a0909d81fecdadf2cb5930c413d217046fdbe3333c020</hash>
+        <hash alg="SHA3-256">14cd0f46ae5251017105642d0977708d255fc08649b5509a0451a8a82835564a</hash>
+        <hash alg="SHA3-512">82efbc4c47eb09ce28accea7581ca4a85cc96e3895952618d11fbafb5fcbf209c2eed01522785ca8e8a073ed329f30fb678652484cbd563863d42c8ecb969a05</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-rio/rdf4j-rio-turtle/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-rio/rdf4j-rio-turtle</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.cqels/cqels-asp@2.0.0-alpha.16?type=jar">
+      <group>org.cqels</group>
+      <name>cqels-asp</name>
+      <version>2.0.0-alpha.16</version>
+      <description>ASP integration module for incremental reasoning over RDF streams</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">d665c197667ad9ba65479220b6fa73de</hash>
+        <hash alg="SHA-1">70a408eb77486e884294408245e571869e92925f</hash>
+        <hash alg="SHA-256">e0f23d4192243fe6a98272a08ecb5c055f5fa4227d05b9d8a09915404d853659</hash>
+        <hash alg="SHA-512">63a75a7240423ea106055c1d27343c1201ebb2cca2a7d1ffe2267553191bfbbfff508447a85658bd78e9eca735bf7519a7d971d9aafff5c5bcbea35783297234</hash>
+        <hash alg="SHA-384">875988712ea6ad6e7cca1bc61892f0601c3fa7c35ad32560f812d67b7b1f06c68615fa8d92c22737290fca3acdac8afc</hash>
+        <hash alg="SHA3-384">38b3f890b46521fb16e8f0ac96c6e0fd3bd272ed4f75ff0efc4c2c2447a5d4b4dc9d4334abfa5142091cb626792e63d9</hash>
+        <hash alg="SHA3-256">34b38754ae96e6c7ee552e8fdeae6a9a678d7a5000c1f24e3793e268f0ad9fdd</hash>
+        <hash alg="SHA3-512">27d5b73572a99152670717f1560e262b51892e0dbf735c1a6084a2213ce2f8aecffac8bf3b2980422a8fc45bcd5242ae9a1bf54a606b8fa324b49eb15e77f3ee</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+          <url>https://opensource.org/license/mit/</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.cqels/cqels-asp@2.0.0-alpha.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/cqels/CQELS4J/cqels-asp</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://maven.pkg.github.com/cqels/CQELS4J</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.antlr/ST4@4.0.8?type=jar">
+      <group>org.antlr</group>
+      <name>ST4</name>
+      <version>4.0.8</version>
+      <description>StringTemplate is a java template engine for generating source code,
+web pages, emails, or any other formatted text output.
+
+StringTemplate is particularly good at multi-targeted code generators,
+multiple site skins, and internationalization/localization. 
+
+It evolved over years of effort developing jGuru.com. 
+
+StringTemplate also generates the stringtemplate website: http://www.stringtemplate.org
+and powers the ANTLR v3 code generator. Its distinguishing characteristic 
+is that unlike other engines, it strictly enforces model-view separation.
+
+Strict separation makes websites and code generators more flexible
+and maintainable; it also provides an excellent defense against malicious
+template authors.
+
+There are currently about 600 StringTemplate source downloads a month.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">a33afc363c76608dd7f8a723f137dbf1</hash>
+        <hash alg="SHA-1">0a1c55e974f8a94d78e2348fa6ff63f4fa1fae64</hash>
+        <hash alg="SHA-256">58caabc40c9f74b0b5993fd868e0f64a50c0759094e6a251aaafad98edfc7a3b</hash>
+        <hash alg="SHA-512">9877289297cd5b15ad464a19467699387f57c510fe8a476e07e9d2334bd11933f9bdb9c6caa4972d4d4c84b56740c6d885cd39300dd7ce35b7c5bde536238086</hash>
+        <hash alg="SHA-384">38c510c50d66af9e138f2131f82647ec22c8a842647e73027c123fbe058a749f33a92c3ae9da6ca05f706fc2479b7485</hash>
+        <hash alg="SHA3-384">6039074870d32336014bb367f62d59f2f89225a4263464c8213bd14acdb32b7d58257f8de65f6acd6b727d7566e9da50</hash>
+        <hash alg="SHA3-256">e454633a9b0efd051c7d8014740df0059f331afaf663bb9ddbd8029a2eb6f14b</hash>
+        <hash alg="SHA3-512">0f41d0ab0e265b24d1aae58699ee93fa3a0356883fbb4ba1976d4f7ab837bb330e213b42048289e83619570421fc8fac7adc6e479481ed13c11bbeb289d9504d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>BSD licence</name>
+          <url>http://antlr.org/license.html</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.antlr/ST4@4.0.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.stringtemplate.org</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/antlr/stringtemplate4/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>git://github.com/antlr/stringtemplate4.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.antlr/antlr-runtime@3.5.2?type=jar">
+      <publisher>ANTLR</publisher>
+      <group>org.antlr</group>
+      <name>antlr-runtime</name>
+      <version>3.5.2</version>
+      <description>A framework for constructing recognizers, compilers, and translators from grammatical descriptions containing Java, C#, C++, or Python actions.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">1fbbae2cb72530207c20b797bdabd029</hash>
+        <hash alg="SHA-1">cd9cd41361c155f3af0f653009dcecb08d8b4afd</hash>
+        <hash alg="SHA-256">ce3fc8ecb10f39e9a3cddcbb2ce350d272d9cd3d0b1e18e6fe73c3b9389c8734</hash>
+        <hash alg="SHA-512">71adb4a78a23e4106e9f09c92a7e0c1d975ad314a49f4a06472e22a2ec09c83fc02c6b684a20055b46ae69fcc119b155b7109ef56e170579c9a462c8839bae52</hash>
+        <hash alg="SHA-384">e56770e380da87eda373e1f0fa7da0fd031b3e310e70b581d8a7eeffa80192f7cdccd073e45f277610ca1e161662db62</hash>
+        <hash alg="SHA3-384">856d53937937c945025382711f9a28b66510ba5fa98ba928cedfa0314cc333d2a570c84d12e3dc877fc11b9e5b5902be</hash>
+        <hash alg="SHA3-256">52d6cd070ca8a0dc5bfe4dbc2e7f6c095e32d3c83c5030bbc160dcc5eb47457d</hash>
+        <hash alg="SHA3-512">d9da25347d24b7ccb0f840cec91f7ca7262b61969351f87b3c6ef7fbc202104d45250ae3920d2dd430a9db20c457529b1adcf9c7e3bc068b1f03793123a88646</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <name>BSD licence</name>
+          <url>http://antlr.org/license.html</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.antlr/antlr-runtime@3.5.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.antlr.org</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/antlr/antlr3/issues</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://groups.google.com/forum/?fromgroups#!forum/antlr-discussion</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/antlr/antlr3/tree/master/antlr-runtime</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar">
+      <group>com.google.guava</group>
+      <name>guava</name>
+      <version>32.1.2-jre</version>
+      <description>Guava is a suite of core and expanded libraries that include
+    utility classes, Google's collections, I/O classes, and
+    much more.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">5fe031b3b35ed56182478811a931d617</hash>
+        <hash alg="SHA-1">5e64ec7e056456bef3a4bc4c6fdaef71e8ab6318</hash>
+        <hash alg="SHA-256">bc65dea7cfd9e4dacf8419d8af0e741655857d27885bb35d943d7187fc3a8fce</hash>
+        <hash alg="SHA-512">d683751034688863dc82315a75620abbeeca525cc592d5227b136c29902a0d035f306c6bfaf87d00d95bd1bd967953b00a932286ce09cfba1a0fb35efd852cd4</hash>
+        <hash alg="SHA-384">cdf41f5f70c467f1f0d8ec42d43eebd8e9da7e5fc60bd24d17db852ce0669a7316abb0a217f19c5cca41b20ade17a1f0</hash>
+        <hash alg="SHA3-384">2084f7a28971f428e1b07a659d9a2cc221654b0e31d457c1219b5526e102124207ab4b2d163d4d5ec731551da396003b</hash>
+        <hash alg="SHA3-256">0ccf9f22abd1ae422fd040e387adb12c31e4dd749c3e40181077e6fb9acdb51b</hash>
+        <hash alg="SHA3-512">e354820ed3f5da18411e6f4ba69294b2d171b2debbd51053e617178fa7a7cb64b3a6978c841a3060fd77474cf99e6aa2451aea39a5755cfe1f7eaef0d20d0e63</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/google/guava</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/google/guava/actions</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/google/guava/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/google/guava/guava</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.guava/failureaccess@1.0.1?type=jar">
+      <group>com.google.guava</group>
+      <name>failureaccess</name>
+      <version>1.0.1</version>
+      <description>Contains
+    com.google.common.util.concurrent.internal.InternalFutureFailureAccess and
+    InternalFutures. Most users will never need to use this artifact. Its
+    classes is conceptually a part of Guava, but they're in this separate
+    artifact so that Android libraries can use them without pulling in all of
+    Guava (just as they can use ListenableFuture by depending on the
+    listenablefuture artifact).</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">091883993ef5bfa91da01dcc8fc52236</hash>
+        <hash alg="SHA-1">1dcf1de382a0bf95a3d8b0849546c88bac1292c9</hash>
+        <hash alg="SHA-256">a171ee4c734dd2da837e4b16be9df4661afab72a41adaf31eb84dfdaf936ca26</hash>
+        <hash alg="SHA-512">f8d59b808d6ba617252305b66d5590937da9b2b843d492d06b8d0b1b1f397e39f360d5817707797b979a5bf20bf21987b35333e7a15c44ed7401fea2d2119cae</hash>
+        <hash alg="SHA-384">67659dbd9647ec303d7f15128dc9dba19b98fd8d74758ee3b602451e32c855e236ccaafe08edf4bbfa245f981268440f</hash>
+        <hash alg="SHA3-384">1460875f0331c5fa3791772a6a322a7db180261bc2adacf7271df1fbf3b088a587a755a604c039982cb593c5cfc1f101</hash>
+        <hash alg="SHA3-256">ea86406e75fcd93eafe3cde1b3135ba485f1bb9b75fed98894a0bf1f0aee04f0</hash>
+        <hash alg="SHA3-512">52ac0f487ab5dd27c9f2e54fd1d84c7a620cae9d49be4072aa2b11501787bf4391ddaa13d02eccdf19e8eea46aecbea5f6064b26777c1b836108a280652e04ac</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.guava/failureaccess@1.0.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/google/guava/failureaccess</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://travis-ci.org/google/guava</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/google/guava/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/google/guava/failureaccess</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava?type=jar">
+      <group>com.google.guava</group>
+      <name>listenablefuture</name>
+      <version>9999.0-empty-to-avoid-conflict-with-guava</version>
+      <description>An empty artifact that Guava depends on to signal that it is providing
+    ListenableFuture -- but is also available in a second "version" that
+    contains com.google.common.util.concurrent.ListenableFuture class, without
+    any other Guava classes. The idea is:
+
+    - If users want only ListenableFuture, they depend on listenablefuture-1.0.
+
+    - If users want all of Guava, they depend on guava, which, as of Guava
+    27.0, depends on
+    listenablefuture-9999.0-empty-to-avoid-conflict-with-guava. The 9999.0-...
+    version number is enough for some build systems (notably, Gradle) to select
+    that empty artifact over the "real" listenablefuture-1.0 -- avoiding a
+    conflict with the copy of ListenableFuture in guava itself. If users are
+    using an older version of Guava or a build system other than Gradle, they
+    may see class conflicts. If so, they can solve them by manually excluding
+    the listenablefuture artifact or manually forcing their build systems to
+    use 9999.0-....</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">d094c22570d65e132c19cea5d352e381</hash>
+        <hash alg="SHA-1">b421526c5f297295adef1c886e5246c39d4ac629</hash>
+        <hash alg="SHA-256">b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99</hash>
+        <hash alg="SHA-512">c5987a979174cbacae2e78b319f080420cc71bcdbcf7893745731eeb93c23ed13bff8d4599441f373f3a246023d33df03e882de3015ee932a74a774afdd0782f</hash>
+        <hash alg="SHA-384">caff9b74079f95832ca7f6029346b34b606051cc8c5a4389fac263511d277ada0c55f28b0d43011055b268c6eb7184d5</hash>
+        <hash alg="SHA3-384">e939f08df0545847ea0d3e4b04a114b08499ad069ba8ec9461d1779f87a56e0c37273630a0f4c14e78c348d3ac7eb97f</hash>
+        <hash alg="SHA3-256">1f0a8b1177773b3a8ace839df5eed63cbf56b24a38714898a6e4ed065c42559f</hash>
+        <hash alg="SHA3-512">6b495ecc2a18b17365cb08d124a0da47f04bcdde81927b5245edf3edd8e498c3c3fb92ce6a4127f660bac851bb1d3e4510e5c20d03be47ce99dc296d360db285</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/google/guava/listenablefuture</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://travis-ci.org/google/guava</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/google/guava/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/google/guava/listenablefuture</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.reflections/reflections@0.10.2?type=jar">
+      <group>org.reflections</group>
+      <name>reflections</name>
+      <version>0.10.2</version>
+      <description>Reflections - Java runtime metadata analysis</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">1d0070839d825f57fe6f4d8e2a82989b</hash>
+        <hash alg="SHA-1">b638d7ca0e0fe0146b60a0e7ba232ad852a73b31</hash>
+        <hash alg="SHA-256">938a2d08fe54050d7610b944d8ddc3a09355710d9e6be0aac838dbc04e9a2825</hash>
+        <hash alg="SHA-512">d04700d4b6d3f28faa611e10ce863df1d6c82dfc6dd1b27cb910e44c19089ca08bef939e2bca7bc79274836f8e9d8801c4326232d24a38dba0a4893a20c7c42c</hash>
+        <hash alg="SHA-384">2604ea7e2330b2c60dbc4177076b50b28a056083fe34cca9005b63f7efbba4d8513d1f21b56c296a73292b2003ce1722</hash>
+        <hash alg="SHA3-384">7b5b12126cc3efb23335cdf73e01b19d714c17072038dc03534f1f596f2cdbe4b8d224e806326b1e7bd82a1eaf221a54</hash>
+        <hash alg="SHA3-256">b1c978e8eb1bc3826d310deba7adfd02f0a90978dcd67867aa3f373a196e4caf</hash>
+        <hash alg="SHA3-512">023c9a40f84b7f822f6d62f6a6ea3fc09ebcd489916085cb501818cd2c6af69e2561b2217c6d5d2cb8d99d87399343df2f863aa919e80d0a49502a5362f8744c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>WTFPL</id>
+          <url>http://www.wtfpl.net/about/</url>
+        </license>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.reflections/reflections@0.10.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://github.com/ronmamo/reflections</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://github.com/ronmamo/reflections/issues</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/ronmamo/reflections/issues</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.javassist/javassist@3.28.0-GA?type=jar">
+      <publisher>Shigeru Chiba, www.javassist.org</publisher>
+      <group>org.javassist</group>
+      <name>javassist</name>
+      <version>3.28.0-GA</version>
+      <description>Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
+    simple.  It is a class library for editing bytecodes in Java.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">1a2dd8c76321cef26cc2669fe70a2557</hash>
+        <hash alg="SHA-1">9a958811a88381bb159cc2f5ed79c34a45c4af7a</hash>
+        <hash alg="SHA-256">57d0a9e9286f82f4eaa851125186997f811befce0e2060ff0a15a77f5a9dd9a7</hash>
+        <hash alg="SHA-512">49d3109104f01efda1ae8a6145fdb91d1b1331587e2981f6cc1a1b991c50af97e8febfea5d9d224a106cab877c1e4850d183eb3c7316b82e62e51b6ca3fc29e8</hash>
+        <hash alg="SHA-384">b71fc9564c478edebbf19b4044bb9cfb80996f779685d79f6a779d98ce3823b5aa234b91b9da35317ebf4534e1e65a31</hash>
+        <hash alg="SHA3-384">bd7f7f52a05aebf17286e7101cafdcb19eb52f14731ce9ad287c07a14f676a8bbba78238e636d2ff5585a90f02f57b82</hash>
+        <hash alg="SHA3-256">bf8cbfa03a6c53bb8aad510a7c6623d5e28f8189295f0dc2a0998993ca8df0d7</hash>
+        <hash alg="SHA3-512">30a7c36e4b4089a5586dd0cb0f8cba1260fbed95e221bd623a66b1d07ff9565227d31c0fd0d131cda9d97483441f08e619aa8bbc758c0df66f3345da7b5adf68</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MPL-1.1</id>
+        </license>
+        <license>
+          <id>LGPL-2.1-only</id>
+        </license>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.javassist/javassist@3.28.0-GA?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.javassist.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://jira.jboss.org/jira/browse/JASSIST/</url>
+        </reference>
+        <reference type="vcs">
+          <url>scm:git:git@github.com:jboss-javassist/javassist.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar">
+      <group>com.google.code.findbugs</group>
+      <name>jsr305</name>
+      <version>3.0.2</version>
+      <description>JSR305 Annotations for Findbugs</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">dd83accb899363c32b07d7a1b2e4ce40</hash>
+        <hash alg="SHA-1">25ea2e8b0c338a877313bd4672d3fe056ea78f0d</hash>
+        <hash alg="SHA-256">766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7</hash>
+        <hash alg="SHA-512">bb09db62919a50fa5b55906013be6ca4fc7acb2e87455fac5eaf9ede2e41ce8bbafc0e5a385a561264ea4cd71bbbd3ef5a45e02d63277a201d06a0ae1636f804</hash>
+        <hash alg="SHA-384">ca0b169d3eb2d0922dc031133a021f861a043bb3e405a88728215fd6ff00fa52fdc7347842dcc2031472e3726164bdc4</hash>
+        <hash alg="SHA3-384">9903fd7505218999f8262efedb3d935d64bcef84aae781064ab5e1b24755466b269517cada562fa140cd1d417ede57a1</hash>
+        <hash alg="SHA3-256">223fda9a89a461afaae73b177a2dc20ed4a90f2f8757f5c65f3241b0510f00ff</hash>
+        <hash alg="SHA3-512">3996b5af57a5d5c6a0cd62b11773360fb051dd86a2ba968476806a2a5d32049b82d69a24a3c694e8fe4d735be6a28e41000cc500cc2a9fb577e058045855d2d6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://findbugs.sourceforge.net/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://code.google.com/p/jsr-305/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.commons</group>
+      <name>commons-collections4</name>
+      <version>4.4</version>
+      <description>The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4a37023740719b391f10030362c86be6</hash>
+        <hash alg="SHA-1">62ebe7544cb7164d87e0637a2a6a2bdc981395e8</hash>
+        <hash alg="SHA-256">1df8b9430b5c8ed143d7815e403e33ef5371b2400aadbe9bda0883762e0846d1</hash>
+        <hash alg="SHA-512">5939c9931eb9557caee3b45fe1dd9ce54cabdc4e6182ed7faac77e1a866dd0cb602bfa4ece2f3316d769913366106bd2b61bf3bb5faad1fa7d808124c06dec0f</hash>
+        <hash alg="SHA-384">74059fd8f61c366ed448e102256fdbd1db0d690501c2c296c80f3657a2c0d8ade3dd9533b1431cc29786bbb624195f46</hash>
+        <hash alg="SHA3-384">15034fb39842620bf3b152cd90bce252644ebc6a29fafd6dcf5e1f3925f09ccea2ae4e195817450f996b25a7081a9a3f</hash>
+        <hash alg="SHA3-256">1716630a207a8f4a83bf9ef19245f46c87d62bfebbcfa1227101e6dd51da8fa5</hash>
+        <hash alg="SHA3-512">c290c98c7b5825d024644ec1162804a1f9ad4da3bb5324d147ddffee6cc79e3c0ecc3825d6116502f2ca292ec80c4e7f8d49a03542dda8f4d58b0dc8228923c5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-collections/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://builds.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/browse/COLLECTIONS</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://git-wip-us.apache.org/repos/asf?p=commons-collections.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.commons</group>
+      <name>commons-lang3</name>
+      <version>3.12.0</version>
+      <description>Apache Commons Lang, a package of Java utility classes for the
+  classes that are in java.lang's hierarchy, or are considered to be so
+  standard as to justify existence in java.lang.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">19fe50567358922bdad277959ea69545</hash>
+        <hash alg="SHA-1">c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e</hash>
+        <hash alg="SHA-256">d919d904486c037f8d193412da0c92e22a9fa24230b9d67a57855c5c31c7e94e</hash>
+        <hash alg="SHA-512">fbdbc0943cb3498b0148e86a39b773f97c8e6013740f72dbc727faeabea402073e2cc8c4d68198e5fc6b08a13b7700236292e99d4785f2c9989f2e5fac11fd81</hash>
+        <hash alg="SHA-384">c34b8a0e0eba2168ad56fedeb7a1d710b6f1d3f1ce6aae99a4e0247bd120efbbadc8dcb2f731045b8a16e3efd30604dc</hash>
+        <hash alg="SHA3-384">8ad6ebe7754bf0caa8cda7e59c0e95360d76e06a7ad6aeec5637985519dbd1dd06e7eed04711039f36ec4c49de280def</hash>
+        <hash alg="SHA3-256">18ef639b2aeeb5aedffb18dbf20c79f33e300d99fb31b131689639cc470e6e4c</hash>
+        <hash alg="SHA3-512">fbea96114dcf4f31cfaaa99987be756ddda3a6c74f8c835461997df794d54b92da1f60fe5c3f1f2a43cb8c5f5db7f4048bef77c70993673c7a93f3660fffc8da</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-lang/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://builds.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://issues.apache.org/jira/browse/LANG</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://gitbox.apache.org/repos/asf?p=commons-lang.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-text@1.10.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.commons</group>
+      <name>commons-text</name>
+      <version>1.10.0</version>
+      <description>Apache Commons Text is a library focused on algorithms working on strings.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4afc9bfa2d31dbf7330c98fcc954b892</hash>
+        <hash alg="SHA-1">3363381aef8cef2dbc1023b3e3a9433b08b64e01</hash>
+        <hash alg="SHA-256">770cd903fa7b604d1f7ef7ba17f84108667294b2b478be8ed1af3bffb4ae0018</hash>
+        <hash alg="SHA-512">afd836a1094449e0a791fee67363666c47b6d24acff353a5089b837b332c0f4af89565c354682521e37062d20e6b52d70c77bb4f24cca9b9532c274fc708a831</hash>
+        <hash alg="SHA-384">06c56e6e513dd77cf10d0da46cdea08c34e220e81fa024735b668c6650df4234e564fe865ff5cafea963f56b1e8ffd4a</hash>
+        <hash alg="SHA3-384">f09065ed066c25debf8c78cbb0bcc738e1ea283302ec992dcfb649acb90091cff879465c65a162e94534d454e3b4e9bb</hash>
+        <hash alg="SHA3-256">0b59c567164bb755f2353b78ba66744000a8c4b35e1df05255b080a21c3a3dd5</hash>
+        <hash alg="SHA3-512">f0fbce02a862b70f472a27d0722c54ac111ca2eb94584b8b0b73d1926aec26047cd92542ad0b3cf980a6825077587f41b194aa93d6f6350d1b87e59e8df1be7c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.commons/commons-text@1.10.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-text</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/apache/commons-parent/actions</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://issues.apache.org/jira/browse/TEXT</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://gitbox.apache.org/repos/asf?p=commons-text.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-compress@1.23.0?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.commons</group>
+      <name>commons-compress</name>
+      <version>1.23.0</version>
+      <description>Apache Commons Compress software defines an API for working with
+compression and archive formats.  These include: bzip2, gzip, pack200,
+lzma, xz, Snappy, traditional Unix Compress, DEFLATE, DEFLATE64, LZ4,
+Brotli, Zstandard and ar, cpio, jar, tar, zip, dump, 7z, arj.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">96b88349958aeaa15cdf6e5e877bdced</hash>
+        <hash alg="SHA-1">4af2060ea9b0c8b74f1854c6cafe4d43cfc161fc</hash>
+        <hash alg="SHA-256">c267f17160e9ef662b4d78b7f29dca7c82b15c5cff2cb6a9865ef4ab3dd5b787</hash>
+        <hash alg="SHA-512">e1ee5b7526ca1b6b67b3a6671d13899048f078bf0e73c1e9c601d947dcc9fd5c78cec9592b2a7a586faf4a7fba1c6885f679375cc2f06680a13ecfdad1ed41dd</hash>
+        <hash alg="SHA-384">10e49e696c18750c37eee7807aca1ef28fadf2c9da6eabb3b5443bb0e1fa8ebd6638addb2042f27e9a9874495eb10d1c</hash>
+        <hash alg="SHA3-384">fe9088b53e6a4e89332b61320b31f206b9217f3eb0adc66968a7d82c020ff263b39b686bcef6ef672d14954515edc514</hash>
+        <hash alg="SHA3-256">9e2ed6dd76655e6c27cd0e4e27a00c32f6e08ad058be4865a33268781484424f</hash>
+        <hash alg="SHA3-512">30b82c3fe576ed24cd82f2941c5bceccd8ceca3b868b91d0f8cdc2d64ac801101c47519ef4984a7af3b5f1a18e5e87bc6572ac8d21f4b91e689d3cd2e0f14694</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+          <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.commons/commons-compress@1.23.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://commons.apache.org/proper/commons-compress/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://github.com/apache/commons-parent/actions</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>https://issues.apache.org/jira/browse/COMPRESS</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>https://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://gitbox.apache.org/repos/asf?p=commons-compress.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/commons-cli/commons-cli@1.4?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>commons-cli</group>
+      <name>commons-cli</name>
+      <version>1.4</version>
+      <description>Apache Commons CLI provides a simple API for presenting, processing and validating a command line interface.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">c966d7e03507c834d5b09b848560174e</hash>
+        <hash alg="SHA-1">c51c00206bb913cd8612b24abd9fa98ae89719b1</hash>
+        <hash alg="SHA-256">fd3c7c9545a9cdb2051d1f9155c4f76b1e4ac5a57304404a6eedb578ffba7328</hash>
+        <hash alg="SHA-512">fa769a08a118141831cd4eaf2ce4f3f65855b8aeee86fbf3e07b4c619facf801f8b55c14c5e56a154cd14f438a8f120bb59a20c1b6be04979501e362f252ca48</hash>
+        <hash alg="SHA-384">aa516a360ed41568a618c45df5288daa75c2d2ddb9a9af61324962f2cf534834bb0fb51bf13710709a771f09992febc5</hash>
+        <hash alg="SHA3-384">cff9bf72b706076f84b27e705c9f56c4f89ddeeb32672346ec37735534e006f631f0a1a9eecf883f475696376cceca91</hash>
+        <hash alg="SHA3-256">ae001ddbe856dfe4395be480cd710615e6759ab122eee9fa909f6bb883b752d2</hash>
+        <hash alg="SHA3-512">f4659c0b58616c7f32f0a947b3d94ab5533ca4315e10f009fd2f6092e56942b5c8653f5a0eaef2e3908ffc43363f31fcb53686d1ac40f1b18c7bd305119c8037</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/commons-cli/commons-cli@1.4?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://commons.apache.org/proper/commons-cli/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://builds.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/browse/CLI</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>http://svn.apache.org/viewvc/commons/proper/cli/trunk/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.poi/poi@4.1.1?type=jar">
+      <publisher>Apache Software Foundation</publisher>
+      <group>org.apache.poi</group>
+      <name>poi</name>
+      <version>4.1.1</version>
+      <description>Apache POI - Java API To Access Microsoft Format Files</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">75aa63950350f748617b23f7ed117774</hash>
+        <hash alg="SHA-1">c915f1a426213a8450fb473b5b3adb63f5ac1017</hash>
+        <hash alg="SHA-256">ddfdf660b815a8e1df5e76e7dd52b65314f1d662014abd450e0fe68c3633324b</hash>
+        <hash alg="SHA-512">d91e50ebc3009c72b46db84732235edbdefca2e0c4f607a4126605394573ed0ad79d5defc3287425f860d958dcc38ebc8a44f6a99e0b44f42e549307edf49f95</hash>
+        <hash alg="SHA-384">be2365f02c66b65f3d253ddea8478d410bea3ff9738f7106d6aa43836571ccc5a35f1f2bb8f59c16f34fc62a72745e3a</hash>
+        <hash alg="SHA3-384">85252f5afe7b3aa22edca35ce7e4c964c15f175e42703e1ff2d568305b1e4cbcabce342a80506102a3ff4e07c0016975</hash>
+        <hash alg="SHA3-256">15ece4d2b9b486c1334975dd5fcc6d079084a46d43aed964b6f160205eb38360</hash>
+        <hash alg="SHA3-512">fdfc2092885b253251fe40c8279217f72e9bf9afc1a6551b31f42326c0b0d69523b41c96995378a6d38045074b66cc4d3fcb13005acc22ddc6431da132b00455</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.poi/poi@4.1.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://poi.apache.org/</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/poi-user/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.poi/poi-ooxml@4.1.1?type=jar">
+      <publisher>Apache Software Foundation</publisher>
+      <group>org.apache.poi</group>
+      <name>poi-ooxml</name>
+      <version>4.1.1</version>
+      <description>Apache POI - Java API To Access Microsoft Format Files</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">5b363c6e36b3cb7fa321006ce2622111</hash>
+        <hash alg="SHA-1">216d8bb4c064c3a1079e77d693cd60346dd63f38</hash>
+        <hash alg="SHA-256">3c8fc87be30f4992ca9e2d5743515e781ebf97696d270bbec0f51ee6f8543e9c</hash>
+        <hash alg="SHA-512">b5884fe877d3263c2d4f47c59740e6154d82518a146e99d4250bec4467512199a522cd716a07803b456ba6febfeb3621ce5fe3d3d5ff1594203855e14ddc0160</hash>
+        <hash alg="SHA-384">05b287d09a674d0bd7ab69eac99f1d06a31a78888578b5c1f1053a0935aa782c9f4c35bd72f7989b8d6486951e53374b</hash>
+        <hash alg="SHA3-384">8c62d7ee55d7e1d2aa41d871af28aa8e1dd91f9c6065df935e1b36d5c6cb5a829da404ccd3d0d58dbcec6792b643947f</hash>
+        <hash alg="SHA3-256">296d72389928132e9dbf582fab11890229b86aa9bfaa570fc920d242c46b5913</hash>
+        <hash alg="SHA3-512">f9fd7f124f63e7ff68fb01f7a6a329c7720022f2be7332bd99404d6e41ed0d1a02c2b74588dc9c07f14ef5ddcb41b69b4bddd86842320ad25ea9648cd7763d29</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.poi/poi-ooxml@4.1.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://poi.apache.org/</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/poi-user/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.poi/poi-ooxml-schemas@4.1.1?type=jar">
+      <publisher>Apache Software Foundation</publisher>
+      <group>org.apache.poi</group>
+      <name>poi-ooxml-schemas</name>
+      <version>4.1.1</version>
+      <description>Apache POI - Java API To Access Microsoft Format Files</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4af0b63a14c60ddd80c6002332a59e56</hash>
+        <hash alg="SHA-1">7bb506f074a5bffce6b367f40ee0535fa7f73003</hash>
+        <hash alg="SHA-256">220954739ed653652712550b1ee56f02b8e8973595c23e2eac7d177c657b1f13</hash>
+        <hash alg="SHA-512">ea0a6cf77cbd3f328b945853c61c42d0b2e954d24af14446c4a31b4a47fc4a117867559f71c231867b9099d753968c3cd253b51244c47a69ef6fc03eb8a652d4</hash>
+        <hash alg="SHA-384">f2e3e63a39595ed59865fedda3738cd6266275e6bd4d93cd5ec6ea84523628cb20266d2c483651eaa4984e9c8b1e72d4</hash>
+        <hash alg="SHA3-384">d1872cb7d5631e2b639e4fd620368b106bcf6e8baf4297b88d526273e6f98ca1f37d680eb86397fe249f56ac367f38aa</hash>
+        <hash alg="SHA3-256">9bbc661f38fd13979f42c90435236692aeecd5dc35f306abd3a5bcaa46020321</hash>
+        <hash alg="SHA3-512">806978dac76ab2ef94919a280644cec5e5e61b8d6d5827f4e11075bc939e1785b1e759c85d9b3ee6408f3586b32fa1f4a23d9277ed261051aa8c035f313531c9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.poi/poi-ooxml-schemas@4.1.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://poi.apache.org/</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/poi-user/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.xmlbeans/xmlbeans@3.1.0?type=jar">
+      <publisher>XmlBeans</publisher>
+      <group>org.apache.xmlbeans</group>
+      <name>xmlbeans</name>
+      <version>3.1.0</version>
+      <description>XmlBeans main jar</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">408902d943e5bd51a4813dae131681a3</hash>
+        <hash alg="SHA-1">6dac1f897dfb3e3f17fc79b18a3353b2e51c464e</hash>
+        <hash alg="SHA-256">a19ea1ec835a101165f7aa3c55427e81b5f2b187bfe7689a19277c51402620b0</hash>
+        <hash alg="SHA-512">21b85e532411edbbf4929e20c4491d3fe0d7b4bb15733b58c6455c901d4a05f918e73b6521e71c62a89a6576d416cddcb79b0c52082cd8132fc30c40e506b4d7</hash>
+        <hash alg="SHA-384">93615bce2e9c1dc01ca6fb4ec40e6f674dca772ea2a7e9ab74aeeff4d52a6f83b5a96e58f64139979f7e0b46ca3d2bfc</hash>
+        <hash alg="SHA3-384">36d7038a07103ec807f4994a4282ab2478fad8ce3d5908c47e1717ef0e0d510dcb28ee91359f6756f5baa24578c1a162</hash>
+        <hash alg="SHA3-256">b607d6077eb687d5ed9dda8ad56105d5886fc3075f4c28b025a54511a327213d</hash>
+        <hash alg="SHA3-512">5b8bea2ae59760372c46c613be63b2764b4d83fca930b5759490092bf8f4eeb225ca6d90c3b04b74d8cb935e70eb085dedddc3d7853a124bd343b052bf60a987</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.xmlbeans/xmlbeans@3.1.0?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://xmlbeans.apache.org/</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10436</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/poi-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://svn.apache.org/repos/asf/xmlbeans/</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/com.github.virtuald/curvesapi@1.06?type=jar">
+      <group>com.github.virtuald</group>
+      <name>curvesapi</name>
+      <version>1.06</version>
+      <description>Implementation of various mathematical curves that define themselves over a set of control points. The API is written in Java. The curves supported are: Bezier, B-Spline, Cardinal Spline, Catmull-Rom Spline, Lagrange, Natural Cubic Spline, and NURBS.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">049221bdb7f8d8a2065c02000e854ed4</hash>
+        <hash alg="SHA-1">159dd2e8956459a4eb0a9a6ecda9004d8d289708</hash>
+        <hash alg="SHA-256">38bb45c99e6153260c19b97b99b6a7370a067de63344de6d1ea11922acaed86b</hash>
+        <hash alg="SHA-512">b659b6d923a1ef51c11fb266bebb49f1c868352c5c3966e59b47b785d87a93b7e8ce1a5ca0c9440bc02738f342ddbafb937551593dda59a9fe3a1653303a4b1d</hash>
+        <hash alg="SHA-384">f59e76eafdf3cf679e7af79c4ef3629055f4c329c60fa52046f320368a34ef358d21d7e430274b727c683b6b7e0bb19c</hash>
+        <hash alg="SHA3-384">80b9f0ff53b569f3a9b915cce6f6b83974c7c864c13d4eb6c10b0dd6efb52b5d65613b54b7212c868c2f48b298dee41d</hash>
+        <hash alg="SHA3-256">44adb2768ed276ff4d723edeb2ba1088b76cbb4ff7d7d7ef310c337a890dc115</hash>
+        <hash alg="SHA3-512">2599952a5b0e968a767dadc740547d46dcc88a3e798333eb890c0e744547a8d9b17f13923ed03a3849e587398a30a69937c47164eac8ec3edf20f24cd08cdd5c</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/com.github.virtuald/curvesapi@1.06?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://github.com/virtuald/curvesapi</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/virtuald/curvesapi</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryalgebra-evaluation</name>
+      <version>4.3.8</version>
+      <description>Evaluation strategy API and implementations for the query algebra model.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">bb2650c3cd5792d616e867bcc4bc0636</hash>
+        <hash alg="SHA-1">372b946126d83b4f58464cff8a7a09c7a11da285</hash>
+        <hash alg="SHA-256">351dbbfc3374d12aeff3365d1fe4ad9374adc687d34412fa9257749bd7337036</hash>
+        <hash alg="SHA-512">adb9468ce6bf50b9d3da4b283d367d39456c28f0ea60f5b2a5ce07fb3a37e8cbea6fb2843b5619bbf66d6364bb1a04e496a4286d9b3671c6d1c26fd50b929d98</hash>
+        <hash alg="SHA-384">5d1f51bfa6d2c84300c0dab15f26691c8bd86b58d88c396a8c00c8fba34f2f1277c788d262d73a4b4671c01a4181bd0e</hash>
+        <hash alg="SHA3-384">d42548b8b79d694d9a132e55724b854b9419029e364e84a2e53d1e5bff1387dd339c86758d46f47e48ccea9988e5e1b1</hash>
+        <hash alg="SHA3-256">6ccc41c1008f655d9aede74efb0a943651e7b3d337ae4e46b4881b2371ffd7bb</hash>
+        <hash alg="SHA3-512">4e9ade944c027179f47ec551018cd474731bda3405f06b75ad9f8102ff6b9f588b8eaab2377830ee43ea37af713ead9828ddf5bfa45f10cca6ac242b708896ad</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-evaluation/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryalgebra/rdf4j-queryalgebra-evaluation</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-query</name>
+      <version>4.3.8</version>
+      <description>Query interfaces and implementations</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">aba440295b96fb747adcfb71d9afb219</hash>
+        <hash alg="SHA-1">77b5240d24f0c9760605ff86028f1ab1bb1f307b</hash>
+        <hash alg="SHA-256">704b6dd5656088ca68318250467e5491bc6bf635819fe6cdeed4d2e31b83b873</hash>
+        <hash alg="SHA-512">e54e855bc97e54ad47d508e9aad2ae34cff76206097b6791f15ee5f1dcc77a79a12301a007bd788889cf6d9fa2a338de12beb224a0d80527096d95dbed16171c</hash>
+        <hash alg="SHA-384">64753e051d368f19d97fecf53db363438a515f8d7f7b1c454f79684d44e0342e8eb4811da5859c82e66f849b250ff5ec</hash>
+        <hash alg="SHA3-384">ec9cb33d42346d1550c51d2ce3d5bd41006b156d629307c720361c4248fcc60af05510891ad2ba4a5537b3fb8633ecea</hash>
+        <hash alg="SHA3-256">38430a06ba92787695ef93b9260260f20c88302d7bd0d5c864b47f87f87010d2</hash>
+        <hash alg="SHA3-512">feee031563f09cd005320d32e421b9fe354a345d329eeee95e557d77af7508e2b5414f0d3dd7e544f5a388805357634393e73803ece87f4c84e87d66b7842f76</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-query/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-query</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sparql@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-repository-sparql</name>
+      <version>4.3.8</version>
+      <description>The SPARQL Repository provides a RDF4J Repository interface to any SPARQL end-point.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">9dd36bd7e70347e5113bdedd691b3bd9</hash>
+        <hash alg="SHA-1">d76c1fb419ea206fe47d6d9d3ba736bceb794bf1</hash>
+        <hash alg="SHA-256">860d8b88051b18dddeb127bed4e325f8c08713bb32d3e2879e651bae8da988a9</hash>
+        <hash alg="SHA-512">d519c705622fe7b91a9543b4ae9bb0b2b1ab8e4bc30cff7487383826befe7df4c8bee090d0c6b057817c6159e1939969c192273646c9aaa73b33a4998f63bc1d</hash>
+        <hash alg="SHA-384">6de99349e99fadcf790f2a7c0ca197d9573004442ad93a11c8ebbe8f905e0924cbbd1f1b1d630a36df46fba7711f871a</hash>
+        <hash alg="SHA3-384">833a9d30b334a3e922a11d4f1468c811512be7dbb840883749c29dc67d7a41963126488daf698c5b10aea90fd04fd9cf</hash>
+        <hash alg="SHA3-256">22f47e76d29c6e5d5c34fa9fe7161b0db8d0ee6fa8c454042b3204d210a64fd0</hash>
+        <hash alg="SHA3-512">7ba199d712aab50f5e38d022a2fd824f3382b3f404cbf83a1ccb4a3bbc948d17d4d4699adfbb9c6e523734221a076ca00dfe63b88180220d8ceb7f600bee2dd0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sparql@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-repository/rdf4j-repository-sparql/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-repository/rdf4j-repository-sparql</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-sparqlxml@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryresultio-sparqlxml</name>
+      <version>4.3.8</version>
+      <description>Query result parser and writer implementation for the SPARQL Query Results XML Format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">680c97a992d9e018e01a724db55322f4</hash>
+        <hash alg="SHA-1">2afca4651fac48521535685ec87c5fcc85c6f5ec</hash>
+        <hash alg="SHA-256">5103f83069c464e7262f4767356d6e68e72ac4b7faa1612a0f76e20b884e2d23</hash>
+        <hash alg="SHA-512">62532d8966f2e96ba54a81360d8496babb0b560c67946fef88bcce34c78490f4b63d034893813f5639667c15db17b4b474e61cc2de0ba5dc82369cd015b28592</hash>
+        <hash alg="SHA-384">ae773fcf60fd9342b9578c8c5d847e3cf273e80ebda5ab9a58cc438107868595c356754c66d047bbd9fcb1cf273cf843</hash>
+        <hash alg="SHA3-384">ef9b243b52d79c8dd26620f09121910b0b6fea0888c70c312d2c418ac68530ba4e3d85d7f34dec08bf949b0910ae2665</hash>
+        <hash alg="SHA3-256">93e68c78b8d8666d15e4235375906d5dea7a8c69aa314161e839b829e6c56ea6</hash>
+        <hash alg="SHA3-512">deced8e5a44356a5c7ddbeedfc9044a2fa6d6c91659bebe195d58ee0af75d61ff2b66627a90595582b08859b38de2221f5027b0802f55dd3c28de08e714667a0</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-sparqlxml@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-sparqlxml/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-sparqlxml</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-iterator@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-common-iterator</name>
+      <version>4.3.8</version>
+      <description>RDF4J common iterators</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">91603e32ddef4be039674dd9876d18c9</hash>
+        <hash alg="SHA-1">6723f95c654749557ed6c1b51ef9373ae81daead</hash>
+        <hash alg="SHA-256">1452a2e0681de6b9818bcf0a33e3e5a412ad4d991a0dcb64f0db9cd154fb4d2e</hash>
+        <hash alg="SHA-512">06c8cae83e8781d0a7f8e10f5086a19a8c8b6ba441406f212f95e0458365ea3f77645e26e075600d5a57834db6fba23072e1df4ca8f32c4a8f32803207a31df9</hash>
+        <hash alg="SHA-384">be567c532a8a154ccfba49228566c9efdc6c741a3ebb00067b5a41c076ae65627c5e43ca30e2521a24261cb5571f468e</hash>
+        <hash alg="SHA3-384">9dcb3af75312345e8d4f37bc5ad20f6e3160814f22a3b3d02af90099e0be952ae12872c4cacdddd46b377e987ad416f0</hash>
+        <hash alg="SHA3-256">c67e4da28adac10fadae30ad36173574ad8e13f86232bbffc1c6d384a088d02e</hash>
+        <hash alg="SHA3-512">dfc6943c729409cc4dcf6236b72e68756d6fd2a6464bb4dccc813c52642599ca9afbc9fa6edf1b747b33f6f43821750ed48c4ef93bab3b009e935d22d3cbd657</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-common-iterator@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-common/rdf4j-common-iterator/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-common/rdf4j-common-iterator</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-http-client</name>
+      <version>4.3.8</version>
+      <description>Client functionality for communicating with an RDF4J server over HTTP.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">cbfce289490c6a0bf7127248a3909484</hash>
+        <hash alg="SHA-1">cc025764f6c8bc2edef17c6da506621ecfa51d75</hash>
+        <hash alg="SHA-256">4cd2e2bf69505cc3f9acc3aa43a7be4bbd226423d854e1d5db7deef7574a5eda</hash>
+        <hash alg="SHA-512">b9724951a8ee7ad4568ce8111ccdc93a93c4a61289c04bf56dd730b38a783f813ffcd53c0d21859ad3ffd2552e841e28a31a0ed52a8469288ced2f704695c7da</hash>
+        <hash alg="SHA-384">a1d8f03dfd23c640df679d2ca65a5d6ca880dce9c5dff0f32e2c114f389f4b05df56ad60318fafb6f922ea9d4611032a</hash>
+        <hash alg="SHA3-384">509b3f2dc6f481d6509cbb9eb7a111ed9da26280ce415e0383c9e41422fb740091d637f732c8e08299b61d4e2cc57ad4</hash>
+        <hash alg="SHA3-256">317da187b7bfab6013810b467c25cc21950035f901325bbe6326fc547de2ab17</hash>
+        <hash alg="SHA3-512">332466e46a6404fb1a29b720101ace5f9960bed19311172086c721c241c0211f86a19bfdddc71a1513c4a239f42d26d2a431c901dba8e3b3a91f3be3611572e6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-http/rdf4j-http-client/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-http/rdf4j-http-client</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-protocol@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-http-protocol</name>
+      <version>4.3.8</version>
+      <description>HTTP protocol (REST-style)</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">f21dfc5c31f429736edd0a9f0c9fe511</hash>
+        <hash alg="SHA-1">ba0ac1394e61a8396a6c19ea014b4cf4eb496da9</hash>
+        <hash alg="SHA-256">4788067cfb03915afbecc533636656f242e29c21d7458c27713bf34f1b52ed4d</hash>
+        <hash alg="SHA-512">5262ff76a8ec80fcd397bf066e30a0640323bbe95e46d66bc69924de40b60959240bb35eee023cfe5b530f8e04faa2bf77a16b7306221a26d4e5ab1ba2f43500</hash>
+        <hash alg="SHA-384">293efd27c4888befeb7113406a0fdc734a83528afb4c9f67ecfb45810e689525c40b426fa485e0907074ddc13aec59ed</hash>
+        <hash alg="SHA3-384">7e42897e27d391a6120e2a2c5b4b850859c6df4c1e801629c4f2718e62555884cc081d75cfaf878a1e8fbf05e674543e</hash>
+        <hash alg="SHA3-256">1f8c85768ee88bdb7da2e7f21b13149ca45dd54186f12754468c38e3b02d20e4</hash>
+        <hash alg="SHA3-512">5556e4c997dbbd2f53b79e50fefa89439cb31a6804541eda1615589decb972ca4603a1f013bc1594889917373c50a41dc384a41bfbd5a8799c3acb5810e2e5af</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-http-protocol@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-http/rdf4j-http-protocol/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-http/rdf4j-http-protocol</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryresultio-api</name>
+      <version>4.3.8</version>
+      <description>Query result IO API</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">03c8b154fa82888e0e95b4556a1b671f</hash>
+        <hash alg="SHA-1">63385be0ff1546e2707490bc9abe294c8c4d2a18</hash>
+        <hash alg="SHA-256">1fffc7b9faabed40c7c1d1894d5aa5a1d0bb35b587b7e61b4aa3a528f55f3119</hash>
+        <hash alg="SHA-512">52c6106a83524932eb31d34b050c995c7de92ab5c9e0da8469b67ee8ed8f5a65e4eba5ce8c62c878c52a19e1e3c53acf00c0543cdcdf163692ac9bbd88292c84</hash>
+        <hash alg="SHA-384">97c0d6a38706f0bb80d1388c9ce7f096b21f7c3361589a1a7f593b1c6beec7ee24cdc01774a9df4eada968e8e13be8b6</hash>
+        <hash alg="SHA3-384">3649ad861d595ccf77426d9f519ed17d6db4265bbb8111c6790d0b00ebadd99c262e16e3dac57790044c09afa9592f09</hash>
+        <hash alg="SHA3-256">337534f3dc3af1828120b9b5ed4f2c6defd03c316231f3b6b50fcf98b928b36a</hash>
+        <hash alg="SHA3-512">3b197c1473e3882989b26f7a18c4759989e04cefc83c4d2e18182a78e8beaf1d41b45389de82a7e6e462dbaae350b69f0364fdd4b4955ec577d0f2dec9f4265a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-binary@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryresultio-binary</name>
+      <version>4.3.8</version>
+      <description>Query result parser and writer implementation for RDF4J's binary query results format.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">b57731705fb5e62518233f6f9a6fa46a</hash>
+        <hash alg="SHA-1">5c3e090f605db7b5cb275da6aab53c15691e1868</hash>
+        <hash alg="SHA-256">fe15c8e86d30ff256268dd0ff7dc824a97f033065ac583294085d8f500b42b5f</hash>
+        <hash alg="SHA-512">5bb27c409b4e4b0c4140059b691073273b5623f131cd094f972cace12e2c5a58c27a9444f0e4bf100243e5d2aae8d0ddd28231525ba5de1a374372e0706c608c</hash>
+        <hash alg="SHA-384">51d115019998bc8cefb247f31dcc67f14a5784c6e2ac1a4b5554260e7c295d26c4bf602ae729869bd2966709ad887b23</hash>
+        <hash alg="SHA3-384">8c7b07f8277d78f201eb2a7ee0429b44e050ad7da95c0ea553f54a1baa8457a49fe72035393f6995c0823dbdf8ea39f3</hash>
+        <hash alg="SHA3-256">4d27b28bf2183b35503a534fdcf227505471f3a8d2c81ab735b967b6cbdd4912</hash>
+        <hash alg="SHA3-512">36e5a4b015ce1cfb161cf3ec98e7ffc1030cefeca41b3f8fd525e67a5a07840ec69070b3f5aa62bf406ab43d16d2fe094f0c4f48e284fc34cb0768a0fee28f7d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-binary@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-binary/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryresultio/rdf4j-queryresultio-binary</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.httpcomponents</group>
+      <name>httpclient</name>
+      <version>4.5.14</version>
+      <description>Apache HttpComponents Client</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">2cb357c4b763f47e58af6cad47df6ba3</hash>
+        <hash alg="SHA-1">1194890e6f56ec29177673f2f12d0b8e627dec98</hash>
+        <hash alg="SHA-256">c8bc7e1c51a6d4ce72f40d2ebbabf1c4b68bfe76e732104b04381b493478e9d6</hash>
+        <hash alg="SHA-512">a084ef30fb0a2a25397d8fab439fe68f67e294bf53153e2e1355b8df92886d40fe6abe35dc84f014245f7158e92641bcbd98019b4fbbd9e5a0db495b160b4ced</hash>
+        <hash alg="SHA-384">c8ccaa1fa8ba7c421413e3c30375bd9c31284e837c476fd831e18043ad4187e92166f49554123108891241bed674b95d</hash>
+        <hash alg="SHA3-384">9a17dfcf12b2af3a9b006ec369f9bc78ba322348bf1a01146e0d4f3fec2bed6cbe8b2193fac5b4d5a0c3036c06477510</hash>
+        <hash alg="SHA3-256">48f0a61b691e22dec9d6db8e0b58be4ca17a42a2846c82f0875de21f72bb0faa</hash>
+        <hash alg="SHA3-512">4ad2c9adc761b7e813330f0dcad3f9978702896c7d0cbf81f60a472d550e320b1527be425ba597c8c9352d587e32e1d46ceb4c73e99c70a6190df4c699a7c2a9</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://hc.apache.org/httpcomponents-client-ga</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/browse/HTTPCLIENT</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/hc-httpclient-users/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/httpcomponents-client/tree/4.5.14/httpclient</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.httpcomponents</group>
+      <name>httpcore</name>
+      <version>4.4.16</version>
+      <description>Apache HttpComponents Core (blocking I/O)</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">28d2cd9bf8789fd2ec774fb88436ebd1</hash>
+        <hash alg="SHA-1">51cf043c87253c9f58b539c9f7e44c8894223850</hash>
+        <hash alg="SHA-256">6c9b3dd142a09dc468e23ad39aad6f75a0f2b85125104469f026e52a474e464f</hash>
+        <hash alg="SHA-512">168026436a6bcf5e96c0c59606638abbdc30de4b405ae55afde70fdf2895e267a3d48bba6bdadc5a89f38e31da3d9a9dc91e1cab7ea76f5e04322cf1ec63b838</hash>
+        <hash alg="SHA-384">ba9ceaee1a37ca3201d6a1315ecb0327b495489efd0baa155c219c475df8d3eb69fe77ab0026563db406497626da6562</hash>
+        <hash alg="SHA3-384">b9dc44dcc7cc86d5036f26d54c4003a2d72808ae7b07a0808bb53505c6d4281b5ad213eb1f3d0fef1113dec57cb0dfe1</hash>
+        <hash alg="SHA3-256">fd8ab51846476c6c18822151c9ec07b39a9633010b5d20ea937fc6910407bc64</hash>
+        <hash alg="SHA3-512">b42fa528242981a9d70e4f68ab75a24292df5112c44c21b6f18cb9201ce747885ba1d4dc69bc3d14d0da46a6c2638f937c11bc45749abeb55dc89ddada90cdda</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://hc.apache.org/httpcomponents-core-ga</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/browse/HTTPCORE</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/hc-httpclient-users/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/apache/httpcomponents-core/tree/4.4.16/httpcore</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar">
+      <publisher>QOS.ch</publisher>
+      <group>org.slf4j</group>
+      <name>jcl-over-slf4j</name>
+      <version>1.7.36</version>
+      <description>JCL 1.2 implemented over SLF4J</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">8065610cde33ed9fd5d34367912c1938</hash>
+        <hash alg="SHA-1">d877e195a05aca4a2f1ad2ff14bfec1393af4b5e</hash>
+        <hash alg="SHA-256">ab57ca8fd223772c17365d121f59e94ecbf0ae59d08c03a3cb5b81071c019195</hash>
+        <hash alg="SHA-512">ac231ab44521bb5478742af13624db5c14aea809c3a2c13b989fba30186ba6db840f2d1b4aea54f9c1f779547b975fd042dd353f54025592774d40192bd71148</hash>
+        <hash alg="SHA-384">618704032ab3f8f87091ac797e2c9319a4b7f36a53e060695d56173b67ce9bc9e16c74cba228e758ac90e279df75428a</hash>
+        <hash alg="SHA3-384">95a189173932d8080d91de8b71b9d1bca49a330db7cad9c41d51fe9514a9f6299b24e31441f06681b3dcc188807dcf40</hash>
+        <hash alg="SHA3-256">7aef3380fdeae9b7a4adfa6ad69c2c92f246fcdbd4fcd3d1056ee846d8ef92fb</hash>
+        <hash alg="SHA3-512">da7d1b8e5a150300e1051dda5755df64275e5822256ef624fd8a37c582cc2774aadce97f8732de52e54b1c74e28ba601d3bfc3482abb4a24f7e9f779e7e8dd64</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://www.slf4j.org</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/qos-ch/slf4j/jcl-over-slf4j</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-collection-factory-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-collection-factory-api</name>
+      <version>4.3.8</version>
+      <description>Evaluation</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">4f38fb82ba30651ef6a088de8cd874da</hash>
+        <hash alg="SHA-1">1841cd7562940d30596afdc91473ef944b03a975</hash>
+        <hash alg="SHA-256">806ed6ae0b2468e27240ff9b8b46dfc231d852551c2d9d2007d03f250e4f3058</hash>
+        <hash alg="SHA-512">90a9064dd227f56b7499fa4c66488616bbb8dff12ce921a8e5252d503159241776b81dc4e4a560db9b4d977fefa0efd7a63254fb3bd4b136191f4e105b9e1904</hash>
+        <hash alg="SHA-384">c3c559a65446a86ebacb9cf5e435bf2f2f5da3c6590552d4dd95eef8e7c69e3ce8fa7156c7615f4cdf8b00a8b8f0a6bc</hash>
+        <hash alg="SHA3-384">0c388c568bafd3781a7eb1e9f53ae2b9665f5ffcbd6e14ca8a24b4266c87116c300402e981cbc0751e40d8495a2055cf</hash>
+        <hash alg="SHA3-256">edc800485e19efe4fd254e38f3c05e084a6f8537305af17109c102ea25017e0d</hash>
+        <hash alg="SHA3-512">5d62f62b6c54070fe4364ec6f255f028c91cb8864d7e6a58cfaf98c2deacdd51eeefb087a403546ebce9f24c7fd4a0cf3d54d129018e180118eea8a60f86abe7</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-collection-factory-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-collection-factory/rdf4j-collection-factory-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-collection-factory/rdf4j-collection-factory-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar">
+      <publisher>The Apache Software Foundation</publisher>
+      <group>org.apache.commons</group>
+      <name>commons-math3</name>
+      <version>3.6.1</version>
+      <description>The Apache Commons Math project is a library of lightweight, self-contained mathematics and statistics components addressing the most common practical problems not immediately available in the Java programming language or commons-lang.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">5b730d97e4e6368069de1983937c508e</hash>
+        <hash alg="SHA-1">e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf</hash>
+        <hash alg="SHA-256">1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308</hash>
+        <hash alg="SHA-512">8bc2438b3b4d9a6be4a47a58410b2d4d0e56e05787ab24badab8cbc9075d61857e8d2f0bffedad33f18f8a356541d00f80a8597b5dedb995be8480d693d03226</hash>
+        <hash alg="SHA-384">95d1186d9ca06a3ea2e6437ddec3a55698e2493d3e72f6f554746b74fa929892bd71a2ab501a4e7b1ce56b7cd64e7ab4</hash>
+        <hash alg="SHA3-384">f85bb3e46a00fc4940a3be1331301302b0eb728e2d1fe2c1842d4761e5a0bc7a420c0c705ae60250ca1c7b03d3694b9e</hash>
+        <hash alg="SHA3-256">919c15ae4b1aef2a58aa6ea4b700bc5562e78dbc382f3393169425ca91ad368c</hash>
+        <hash alg="SHA3-512">dbe54d586c898cdbd7df6c31c131ca3525db17fcea5c7f5da8cbfe617e2afc667289290c76771ec5c9567a56fb2b177b0a31d67abcc656410c90287da4d88999</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>http://commons.apache.org/proper/commons-math/</url>
+        </reference>
+        <reference type="build-system">
+          <url>https://continuum-ci.apache.org/</url>
+        </reference>
+        <reference type="distribution-intake">
+          <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
+        </reference>
+        <reference type="issue-tracker">
+          <url>http://issues.apache.org/jira/browse/MATH</url>
+        </reference>
+        <reference type="mailing-list">
+          <url>http://mail-archives.apache.org/mod_mbox/commons-user/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://git-wip-us.apache.org/repos/asf?p=commons-math.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sail@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-repository-sail</name>
+      <version>4.3.8</version>
+      <description>Repository that uses a Sail stack.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">525eb1d5119d6b66899faa3f7d4e50d3</hash>
+        <hash alg="SHA-1">5de7c5c193d62f467150a6eb23fc89c5e471f13a</hash>
+        <hash alg="SHA-256">2b929ce3d1ede9d66b5329dcb515db7a29e5b526cc13f57b2d3500471e79149d</hash>
+        <hash alg="SHA-512">def1834fc7d182668407ff70a4e9a84143a88b2469ee7004c41e698d6e853a79498224089bfd95cef713ac6e338b41897409980827be6335fa33c2800b1df48e</hash>
+        <hash alg="SHA-384">317186063ab11fd5296c21e6091a838c9c6e20d8a301ba73bf137997cca8d6055340a24e1b545b926ef06d0aa06aa5a6</hash>
+        <hash alg="SHA3-384">493297a8979d7f387db7071b43a541757907e0bc104bd3262368ee99f346a90768f80672d16e6354374f9e1c046aef35</hash>
+        <hash alg="SHA3-256">5bac5ecf98086ad7ba5d8df1ffb3a47d78f3c24f6b4da2620b90af8e68a6b9c9</hash>
+        <hash alg="SHA3-512">dc6a0bd4043245d32b92800fa3d2157c442d54c7f4d9c838750749cfba81debe67e5db0da3ece53e2cb549f615ddde572c28f1b14c4c7c5dc2d4e3b62535317f</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sail@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-repository/rdf4j-repository-sail/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-repository/rdf4j-repository-sail</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-sail-api</name>
+      <version>4.3.8</version>
+      <description>RDF Storage And Inference Layer ("Sail") API.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">860f7fdb9d02a7ec8665bcbae2c120f7</hash>
+        <hash alg="SHA-1">73931184c4d90bdbcbbff03a7e314faacbfca644</hash>
+        <hash alg="SHA-256">c73d442ee58eadf1ada8e25db5d06b6a43212116890e2ec2559fcea79b0032f6</hash>
+        <hash alg="SHA-512">d1c996a6dec731602c30fcd3487775d6b6696376be3b11aea2b71d7c153d7aee429a460d7738ea0f338dd217f4e503f0a50c63dca14c8cf560d2901b513a748a</hash>
+        <hash alg="SHA-384">8d145544bc5dabae50e7a3dd90ae565e0a1868280a9983d67e23e11bcbe9846d2444ae795ac6b3a3e84934638b15b676</hash>
+        <hash alg="SHA3-384">f0c3085a93f99db12617a20aecb8bc473ad1934a223cae5e64657a8af5b3df5020fab0693eb6294b660c23ba5a1dd5d9</hash>
+        <hash alg="SHA3-256">1f225c09b18e36fa021a13613b1a53cfcfc656e93700da2758ed92614cec026c</hash>
+        <hash alg="SHA3-512">44a4dc4ed73a0c75b76ebe239252a33a79291580d5a36c4870365add6eb1bde5a3ddbe6dad917490056db45e3aed045943682951990b21ed3d0422e0087357fe</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-sail/rdf4j-sail-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-sail/rdf4j-sail-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-queryparser-api</name>
+      <version>4.3.8</version>
+      <description>Query language parsers API.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">715fbe970b41207de8a6deca1d3daf6c</hash>
+        <hash alg="SHA-1">7d9b3be8c6db2e296c730b26e91126baae2af9e6</hash>
+        <hash alg="SHA-256">d3803da40a21d67b9d128c35c800c6194423195e6606b8ce3f67a546f30e756d</hash>
+        <hash alg="SHA-512">3d53d21bf8c4e034189e34b21c8b91cfddaff9550600694b3dbc4aa7842413702267f892668078d5768758bf160ddcd88d9f8e3d2ee4485837fc72aae81106d1</hash>
+        <hash alg="SHA-384">1a7d51253f8df63f0fdf75735992353cc6126cf3aaf1b2c3eaf85f5551ab32fc45fd963e755c2c8ad16dd3e4ac29f389</hash>
+        <hash alg="SHA3-384">dd7c5589bdcfb51ddbec252d7a5f5c0e585bc20bb635b553be158b633845fe1b2840e8e620bbe80afa6d6f51ef4e01a2</hash>
+        <hash alg="SHA3-256">54bf5ceb73784a10c6e8edb53979dabb6d15f25701ef9be00c69e1c57d26c7a4</hash>
+        <hash alg="SHA3-512">14e52f6cd4a935808312a0a66ab48d6c3b87b4dbc721a6bef461adcc2b0c93f4fd07f77285dc22224629f8909d95210c991bf4cc362f9555d629d2169bfdc794</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-queryparser/rdf4j-queryparser-api/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-queryparser/rdf4j-queryparser-api</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-memory@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-sail-memory</name>
+      <version>4.3.8</version>
+      <description>Sail implementation that stores data in main memory, optionally using a dump-restore file for persistence.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">1c90a2a260bd9d2bb69f3254e3c200a3</hash>
+        <hash alg="SHA-1">3e9f7398b999e16f49ee818332ca2c1a509280b1</hash>
+        <hash alg="SHA-256">d2c081166115a4caf69173c15865e47b2a3cc4ecc928d8f6afb266757a0374bb</hash>
+        <hash alg="SHA-512">f580129240ad2d47e0f4d4b2e378b0c6cb7dccce6045819bb4add29267cc277de06053c2076bcdb826e1e488848315496d5f0bb217fa71c2f3aff8d8ef537d6e</hash>
+        <hash alg="SHA-384">11e4312a2956acfb19c5d066496482a5906d95ff11ab84f9bdd67d933447a226c4de4ae862dcd11339b26e905fcebf48</hash>
+        <hash alg="SHA3-384">e3e37055ce52d4e255b317733ca71a89b800bf31564f8874f3cdd68ea85d6d5d0fde9a56e820037ce212ee71b3a55c64</hash>
+        <hash alg="SHA3-256">caa680308d64f042bd29a178f2ccd9c3a203f86c2bcf39601eab85a285aaff96</hash>
+        <hash alg="SHA3-512">e5956c816071f913a52d9c839ba910b8164d46422fb189334bedea29b6c839c539f489ef3767fce763fdb18c2f1b9faafd589debda1901e3116b0b176839ec46</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-sail-memory@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-sail/rdf4j-sail-memory/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-sail/rdf4j-sail-memory</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type="library" bom-ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-base@4.3.8?type=jar">
+      <publisher>Eclipse Foundation</publisher>
+      <group>org.eclipse.rdf4j</group>
+      <name>rdf4j-sail-base</name>
+      <version>4.3.8</version>
+      <description>RDF Storage And Inference Layer ("Sail") API.</description>
+      <scope>required</scope>
+      <hashes>
+        <hash alg="MD5">67c0b8af02ad1da70ad164d7ae1dd94a</hash>
+        <hash alg="SHA-1">23435ae54a945be82e6bd3af6502086bcfd6ad08</hash>
+        <hash alg="SHA-256">3aad1e85852420ec216b3977ff5859b1fdc88c80a040c4d4d059d7196bc363da</hash>
+        <hash alg="SHA-512">68432da86be6664a6791e1c91ea463900c59afd136a2acc397432a7653a63342e03333be694ad3317e82d56cba9d0d2aae379eae14f32b455dcfd9c2a6869889</hash>
+        <hash alg="SHA-384">09b9fd9862012715cf3fec2b6ae9e7f493eeb44b6f0009b3e79491052489bc8722f95c6223388787953c9605c1cc42d0</hash>
+        <hash alg="SHA3-384">2a1444abc8d376a52edbde89955c72e43ac552470cd8a03d2032446d35f629471cd349a0d9c4bac17e64490c69f19d6f</hash>
+        <hash alg="SHA3-256">af4cc1a3b2f8e69b4efd68b55adfea2c3c56e7436b940c59c7e7fbac03b800aa</hash>
+        <hash alg="SHA3-512">f9e9f0564ee03575bc78ee0958ebedb4f4315349d19b3f21956846b2b9c48b78bcc534d33e5e8c9eb247797c8abbdb12a34394092890c6bb3c41c0dd6330e38e</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>BSD-3-Clause</id>
+        </license>
+      </licenses>
+      <purl>pkg:maven/org.eclipse.rdf4j/rdf4j-sail-base@4.3.8?type=jar</purl>
+      <externalReferences>
+        <reference type="website">
+          <url>https://rdf4j.org/rdf4j-core/rdf4j-sail/rdf4j-sail-base/</url>
+        </reference>
+        <reference type="vcs">
+          <url>https://github.com/eclipse/rdf4j/rdf4j-core/rdf4j-sail/rdf4j-sail-base</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+  <dependencies>
+    <dependency ref="pkg:maven/org.cqels/cqels-plugin-spi@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-engine@2.0.0-alpha.16?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-engine@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-shacl@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-asp@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sail@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-memory@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-geo@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-sparql@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+      <dependency ref="pkg:maven/org.antlr/antlr4-runtime@4.13.1?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-geo@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-geosparql@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-vocabulary@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-exception@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-text@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-io@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-iterator@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-annotation@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-annotation@4.3.8?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-vocabulary@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-exception@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-annotation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-text@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-io@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-util@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-util@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-iterator@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar">
+      <dependency ref="pkg:maven/com.google.guava/failureaccess@1.0.1?type=jar"/>
+      <dependency ref="pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/com.google.guava/failureaccess@1.0.1?type=jar"/>
+    <dependency ref="pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-geosparql@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.locationtech.spatial4j/spatial4j@0.8?type=jar"/>
+      <dependency ref="pkg:maven/org.locationtech.jts/jts-core@1.18.2?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sparql@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-iterator@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-collection-factory-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar"/>
+      <dependency ref="pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-text@1.10.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar"/>
+      <dependency ref="pkg:maven/com.github.jsonld-java/jsonld-java@0.13.4?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar"/>
+    <dependency ref="pkg:maven/com.github.jsonld-java/jsonld-java@0.13.4?type=jar">
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar"/>
+      <dependency ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar">
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar"/>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.0?type=jar"/>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar"/>
+    <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.17.0?type=jar">
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/com.fasterxml.jackson.core/jackson-core@2.17.0?type=jar"/>
+      <dependency ref="pkg:maven/net.bytebuddy/byte-buddy@1.14.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/net.bytebuddy/byte-buddy@1.14.9?type=jar"/>
+    <dependency ref="pkg:maven/org.apache.commons/commons-text@1.10.0?type=jar">
+      <dependency ref="pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sparql@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-sparql@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-sparqlxml@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-util@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-protocol@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-binary@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-sparqlxml@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar"/>
+      <dependency ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/jcl-over-slf4j@1.7.36?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-protocol@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-transaction@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-collection-factory-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-collection-factory-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-binary@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-sparqlxml@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryresultio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-common-xml@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.httpcomponents/httpclient@4.5.14?type=jar">
+      <dependency ref="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar"/>
+      <dependency ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.httpcomponents/httpcore@4.4.16?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-sparql@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar"/>
+    <dependency ref="pkg:maven/org.locationtech.spatial4j/spatial4j@0.8?type=jar"/>
+    <dependency ref="pkg:maven/org.locationtech.jts/jts-core@1.18.2?type=jar"/>
+    <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar">
+      <dependency ref="pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar"/>
+    <dependency ref="pkg:maven/org.antlr/antlr4-runtime@4.13.1?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/commons-io/commons-io@2.11.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-shacl@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-reasoning@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-asp@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-reasoning@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.cqels/cqels-asp@2.0.0-alpha.16?type=jar">
+      <dependency ref="pkg:maven/org.cqels/cqels-core@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.cqels/cqels-reasoning@2.0.0-alpha.16?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.antlr/antlr4-runtime@4.13.1?type=jar"/>
+      <dependency ref="pkg:maven/org.antlr/ST4@4.0.8?type=jar"/>
+      <dependency ref="pkg:maven/com.google.guava/guava@32.1.2-jre?type=jar"/>
+      <dependency ref="pkg:maven/org.reflections/reflections@0.10.2?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-lang3@3.12.0?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-text@1.10.0?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-compress@1.23.0?type=jar"/>
+      <dependency ref="pkg:maven/commons-cli/commons-cli@1.4?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.poi/poi@4.1.1?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.poi/poi-ooxml@4.1.1?type=jar"/>
+      <dependency ref="pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.antlr/ST4@4.0.8?type=jar">
+      <dependency ref="pkg:maven/org.antlr/antlr-runtime@3.5.2?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.antlr/antlr-runtime@3.5.2?type=jar"/>
+    <dependency ref="pkg:maven/org.reflections/reflections@0.10.2?type=jar">
+      <dependency ref="pkg:maven/org.javassist/javassist@3.28.0-GA?type=jar"/>
+      <dependency ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.javassist/javassist@3.28.0-GA?type=jar"/>
+    <dependency ref="pkg:maven/com.google.code.findbugs/jsr305@3.0.2?type=jar"/>
+    <dependency ref="pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar"/>
+    <dependency ref="pkg:maven/org.apache.commons/commons-compress@1.23.0?type=jar"/>
+    <dependency ref="pkg:maven/commons-cli/commons-cli@1.4?type=jar"/>
+    <dependency ref="pkg:maven/org.apache.poi/poi@4.1.1?type=jar">
+      <dependency ref="pkg:maven/commons-codec/commons-codec@1.15?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-collections4@4.4?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-math3@3.6.1?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.poi/poi-ooxml@4.1.1?type=jar">
+      <dependency ref="pkg:maven/org.apache.poi/poi@4.1.1?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.poi/poi-ooxml-schemas@4.1.1?type=jar"/>
+      <dependency ref="pkg:maven/org.apache.commons/commons-compress@1.23.0?type=jar"/>
+      <dependency ref="pkg:maven/com.github.virtuald/curvesapi@1.06?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.poi/poi-ooxml-schemas@4.1.1?type=jar">
+      <dependency ref="pkg:maven/org.apache.xmlbeans/xmlbeans@3.1.0?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.apache.xmlbeans/xmlbeans@3.1.0?type=jar"/>
+    <dependency ref="pkg:maven/com.github.virtuald/curvesapi@1.06?type=jar"/>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-sail@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-repository-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-http-client@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryparser-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@4.3.8?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-memory@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-base@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+    <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-base@4.3.8?type=jar">
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-sail-api@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-evaluation@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-queryalgebra-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-query@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.eclipse.rdf4j/rdf4j-model@4.3.8?type=jar"/>
+      <dependency ref="pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"/>
+    </dependency>
+  </dependencies>
+</bom>
