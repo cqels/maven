@@ -37,17 +37,35 @@ sha256sum ~/.m2/repository/$REL
 
 Or check everything Maven resolved, from your local repository root so
 the manifest's relative paths line up (skipping the `*-shaded.jar`,
-which is listed but not served here — it ships as the container image):
+which is listed but not served here — it ships as the container image).
+
+This exits non-zero on any mismatch, and also when it checked nothing:
+a verification step that cannot fail is worse than none, because it
+reads as a pass. The `< <(...)` redirect matters — a piped `while`
+runs in a subshell, so a failure flag set inside it would be lost.
 
 ```bash
-cd ~/.m2/repository
-grep -E '^[0-9a-f]{64}  org/cqels/' /path/to/SHA256SUMS \
-  | grep -vE -- '-shaded\.jar$' \
-  | while read -r want rel; do
-      [ -f "$rel" ] || continue
-      got=$(sha256sum "$rel" | cut -d' ' -f1)
-      [ "$got" = "$want" ] && echo "OK   $rel" || echo "FAIL $rel"
-    done
+#!/usr/bin/env bash
+cd ~/.m2/repository || exit 1
+rc=0
+checked=0
+while read -r want rel; do
+  [ -f "$rel" ] || continue
+  checked=$((checked + 1))
+  got=$(sha256sum "$rel" | cut -d' ' -f1)
+  if [ "$got" = "$want" ]; then
+    echo "OK   $rel"
+  else
+    echo "FAIL $rel (signed $want, local $got)"
+    rc=1
+  fi
+done < <(grep -E '^[0-9a-f]{64}  org/cqels/' /path/to/SHA256SUMS | grep -vE -- '-shaded\.jar$')
+
+if [ "$checked" -eq 0 ]; then
+  echo "checked nothing — wrong directory, or no org.cqels artifacts resolved yet" >&2
+  rc=1
+fi
+exit $rc
 ```
 
 The signature covers the unmodified manifest; filtering only narrows
