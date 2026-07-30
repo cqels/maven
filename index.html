@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CQELS releases</title>
+<style>
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif;
+         max-width: 46rem; margin: 3rem auto; padding: 0 1.25rem;
+         color: rgb(26,26,26); background: rgb(255,255,255); }
+  h1, h2 { line-height: 1.25; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { background: rgb(246,248,250); padding: 1rem; overflow-x: auto;
+        border-radius: 6px; }
+  a { color: rgb(6,69,173); }
+  .muted { color: rgb(90,90,90); font-size: 0.9rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: rgb(230,230,230); background: rgb(20,20,20); }
+    pre { background: rgb(35,35,35); }
+    a { color: rgb(120,170,255); }
+    .muted { color: rgb(160,160,160); }
+  }
+</style>
+</head>
+<body>
+<h1>CQELS releases</h1>
+<p>Maven artifacts for <code>org.cqels</code>, served anonymously. No account,
+no token, no <code>settings.xml</code>.</p>
+
+<h2>Use it</h2>
+<pre><code>&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;cqels&lt;/id&gt;
+    &lt;url&gt;https://maven.cqels.org/releases&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;dependency&gt;
+  &lt;groupId&gt;org.cqels&lt;/groupId&gt;
+  &lt;artifactId&gt;cqels-engine&lt;/artifactId&gt;
+  &lt;version&gt;2.0.0-alpha.17&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p class="muted">15 modules published at 2.0.0-alpha.17.</p>
+
+<h2>Releases</h2>
+<ul>
+  <li><a href="/releases/supply-chain/2.0.0-alpha.17/">2.0.0-alpha.17</a></li>
+  <li>2.0.0-alpha.16</li>
+</ul>
+
+<h2>Verify what you downloaded</h2>
+<p>Each release directory carries a cosign-signed <code>SHA256SUMS</code>
+alongside a <code>VERIFY.md</code> giving the exact commands. The public key is
+served from a different origin than these artifacts, deliberately: a key sitting
+beside the things it signs proves nothing.</p>
+
+</body>
+</html>

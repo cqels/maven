@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.cqels</groupId>
+    <artifactId>cqels-parent</artifactId>
+    <version>2.0.0-alpha.17</version>
+  </parent>
+  <artifactId>cqels-plugin-spi</artifactId>
+  <version>2.0.0-alpha.17</version>
+  <name>CQELS Plugin SPI</name>
+  <description>Deploy-time plugin interface for CQELS: ServiceLoader-discovered plugins that
+        advertise governed MCP tools through a neutral, MCP-SDK-free descriptor. Published so
+        external plugin authors can compile against it.</description>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/license/mit</url>
+      <distribution>repo</distribution>
+      <comments>See the LICENSE file at the repository root. Third-party dependency
+                licenses are documented in THIRD-PARTY-NOTICES.md.</comments>
+    </license>
+  </licenses>
+  <dependencies>
+    <dependency>
+      <groupId>org.cqels</groupId>
+      <artifactId>cqels-engine</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
