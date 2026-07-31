@@ -53,8 +53,9 @@ fi
 
 Or check everything Maven resolved, from your local repository root so
 the manifest's relative paths line up. Every signed path is checked,
-including the `*-shaded.jar`: you will usually not have that file
-(it has no anonymous download route), and it is skipped when absent —
+including the `*-shaded.jar`: you may not have that file
+(it ships as an asset on the GitHub release page rather than from this
+repository), and it is skipped when absent —
 but if it IS present it gets hashed like anything else.
 
 This exits non-zero on any mismatch, and also when it checked nothing:
