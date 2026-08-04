@@ -1,0 +1,312 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.6",
+  "serialNumber" : "urn:uuid:bacfed88-120a-3bd7-b802-b4c043aa96ea",
+  "version" : 1,
+  "metadata" : {
+    "lifecycles" : [
+      {
+        "phase" : "build"
+      }
+    ],
+    "tools" : {
+      "components" : [
+        {
+          "type" : "library",
+          "author" : "OWASP Foundation",
+          "group" : "org.cyclonedx",
+          "name" : "cyclonedx-maven-plugin",
+          "version" : "2.9.2",
+          "description" : "CycloneDX Maven plugin",
+          "hashes" : [
+            {
+              "alg" : "MD5",
+              "content" : "843a7130400f75d33f563dc7e9f52dea"
+            },
+            {
+              "alg" : "SHA-1",
+              "content" : "2cac5a176b9f48801dfc4910d4f6a34bfbb13445"
+            },
+            {
+              "alg" : "SHA-256",
+              "content" : "d9e5a12bac3c1a91d85f3a1ad84307099f457ff24aa65b438ba7de9ca784a54e"
+            },
+            {
+              "alg" : "SHA-512",
+              "content" : "636f788518752c5a23d14bad41d68b0d549e4b3a3d720d66f2f6e2b8b956207942ee12abba968a1e9aac6cf1d78d9e738a4a75eeb8bc6fca2377030fbb482407"
+            },
+            {
+              "alg" : "SHA-384",
+              "content" : "72aad41633b92fadd4dbd1c6f5c1b956836b22d3b96afbdd7ca8b8eb0456eec00c2ed658e3c2d4e93d95048bcc23dac8"
+            },
+            {
+              "alg" : "SHA3-384",
+              "content" : "9837cee0f9b7d575f8d88df3ad6f58a075032ad2635e0987abbc102240327f1cec87dc062b3034009f028ab5baf988f9"
+            },
+            {
+              "alg" : "SHA3-256",
+              "content" : "4c654267cde6eb6d295dbc06b33e33528412bee57549dae89c85b8df8202dbcb"
+            },
+            {
+              "alg" : "SHA3-512",
+              "content" : "f7da73632ef2fd1c2d85f0cf5eebc2b6a3ff1ae2ed0945442e679da71490562a2ff6b67422dbd5285f4042eda6637e6f3544f62825a625b38efacfdebc8df137"
+            }
+          ]
+        }
+      ]
+    },
+    "component" : {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.18?type=jar",
+      "group" : "org.cqels",
+      "name" : "cqels-storage-spi",
+      "version" : "2.0.0-alpha.18",
+      "description" : "Pluggable persistence interfaces and shared contracts for CQELS",
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.18?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/cqels/CQELS4J/cqels-storage-spi"
+        }
+      ]
+    },
+    "properties" : [
+      {
+        "name" : "maven.goal",
+        "value" : "makeBom"
+      },
+      {
+        "name" : "maven.scopes",
+        "value" : "compile,provided,runtime,system"
+      },
+      {
+        "name" : "cdx:reproducible",
+        "value" : "enabled"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar",
+      "publisher" : "reactor",
+      "group" : "io.projectreactor",
+      "name" : "reactor-core",
+      "version" : "3.6.0",
+      "description" : "Non-Blocking Reactive Foundation for the JVM",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "a8abf82c595fa25c746afc8102b6c91e"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "ac8c6923f46c0dff079133e010f0aa3132ccf1c2"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "1b37779edf618eb526d27986329740fa5c25c61568ca812812d0cca127ceeac1"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "176142287d930fd367cc3dcb6562929427a9f39ac2552c28a71ae7daadf3c07cfe260134f8f4d3bdaae7f6abfbd4b45e37f9c630db8421da98d0152994daefa9"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "45935830255dd4157cb63a27b50d2fb53acfa3c557b036e50efc8fd90f038eb4549e9919350953e398c8989a531883f7"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "789a52ebd34189fa3c2abf85b90d470e48e4b1454da251db1a29e325c8843ab6d22d1f780a89c6eaf72363e84104c064"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "18d56d72d551b98295d9436694939a3247a6eb2eac86820bf37b8e1453b9563c"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "e97951151b4b309dc8fbce272cf4c8ef15318acd14bdbaaddd53081ac9ab3fbe6674199e0b2bef70d53a75bb6304d648b79387180d3c7f084731d5a36bccb2af"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "Apache-2.0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "https://github.com/reactor/reactor-core"
+        },
+        {
+          "type" : "issue-tracker",
+          "url" : "https://github.com/reactor/reactor-core/issues"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/reactor/reactor-core"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "group" : "org.reactivestreams",
+      "name" : "reactive-streams",
+      "version" : "1.0.4",
+      "description" : "A Protocol for Asynchronous Non-Blocking Data Sequence",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "eda7978509c32d99166745cc144c99cd"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "3864a1320d97d7b045f729a326e1e077661f31b7"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "f75ca597789b3dac58f61857b9ac2e1034a68fa672db35055a8fb4509e325f28"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "cdab6bd156f39106cd6bbfd47df1f4b0a89dc4aa28c68c31ef12a463193c688897e415f01b8d7f0d487b0e6b5bd2f19044bf8605704b024f26d6aa1f4f9a2471"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "ce787a93e3993dca02d7ccb8a65b2922bc94bfaf5a521ffb5567300a9abc3c222ebbfffed28f5219934ceb3da5b3e9c8"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "68daf9498232897989ee91c1ad47c28796c028658cfe023c2907152cd64ac303a3bd961e5d33d952be7441bee7ff5f14"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "0c2165ea39330d7cccf05aa60067dc8562a15db7f23690c8d4fc71cd3e49fdd8"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "19c2d866a6c4d7c61ceb63d3b98324928eac880c8f23d84202c1145b4779438b1b275f1d20c74b06ecb0fbfe83baaecce3b4366ead0f7cc8b7b6916a8910c944"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT-0",
+            "url" : "https://github.com/aws/mit-0"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.reactive-streams.org/"
+        }
+      ]
+    },
+    {
+      "type" : "library",
+      "bom-ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar",
+      "publisher" : "QOS.ch",
+      "group" : "org.slf4j",
+      "name" : "slf4j-api",
+      "version" : "2.0.9",
+      "description" : "The slf4j API",
+      "scope" : "required",
+      "hashes" : [
+        {
+          "alg" : "MD5",
+          "content" : "45630e54b0f0ac2b3c80462515ad8fda"
+        },
+        {
+          "alg" : "SHA-1",
+          "content" : "7cf2726fdcfbc8610f9a71fb3ed639871f315340"
+        },
+        {
+          "alg" : "SHA-256",
+          "content" : "0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c"
+        },
+        {
+          "alg" : "SHA-512",
+          "content" : "069e6ddce79617e37d61758120c7e68348ee62f255781948937f7bec3058e46244026d7f6a11e90fbc15cd4288c4bb1acee4f242af521c721a9e68a05e64d526"
+        },
+        {
+          "alg" : "SHA-384",
+          "content" : "fd6f7ad85d02ac63cd1a586c8bb158c1fc000495f512f097731ea9f749b5da2637615b821294962805ba312c738f40aa"
+        },
+        {
+          "alg" : "SHA3-384",
+          "content" : "17cd61f59a162250b52a89c7c56eb60da253b776210500313c7b82744483ff84717946f969251fb4d76f9bb12a2458fe"
+        },
+        {
+          "alg" : "SHA3-256",
+          "content" : "9dcb04582c64c79e788f9191195834ec75bb3457133d22a176a0ccb069b97103"
+        },
+        {
+          "alg" : "SHA3-512",
+          "content" : "990faffa454598a3fa82affe30f1323db769d2e1fff20d9c7163ef6fd95ac7a0874c06a634207a2eaed9e5afbdee68b225138fc75018717ba97efe3ffe92c88a"
+        }
+      ],
+      "licenses" : [
+        {
+          "license" : {
+            "id" : "MIT",
+            "url" : "https://opensource.org/license/mit/"
+          }
+        }
+      ],
+      "purl" : "pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar",
+      "externalReferences" : [
+        {
+          "type" : "website",
+          "url" : "http://www.slf4j.org"
+        },
+        {
+          "type" : "distribution-intake",
+          "url" : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+        },
+        {
+          "type" : "vcs",
+          "url" : "https://github.com/qos-ch/slf4j/slf4j-parent/slf4j-api"
+        }
+      ]
+    }
+  ],
+  "dependencies" : [
+    {
+      "ref" : "pkg:maven/org.cqels/cqels-storage-spi@2.0.0-alpha.18?type=jar",
+      "dependsOn" : [
+        "pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar",
+        "pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/io.projectreactor/reactor-core@3.6.0?type=jar",
+      "dependsOn" : [
+        "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar"
+      ]
+    },
+    {
+      "ref" : "pkg:maven/org.reactivestreams/reactive-streams@1.0.4?type=jar",
+      "dependsOn" : [ ]
+    },
+    {
+      "ref" : "pkg:maven/org.slf4j/slf4j-api@2.0.9?type=jar",
+      "dependsOn" : [ ]
+    }
+  ]
+}
