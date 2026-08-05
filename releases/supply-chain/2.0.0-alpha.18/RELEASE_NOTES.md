@@ -1,7 +1,7 @@
 # CQELS 2.0.0-alpha.18
 
-Prepared, not tagged. The fixes below are merged on `main` and will ship with whatever
-release is cut next; the version number is provisional until then.
+Released 2026-08-04. Published to this mirror with a signed `SHA256SUMS` covering every
+artifact; see `VERIFY.md` in this directory for the verification procedure.
 
 **Supersedes alpha.17.** alpha.17 set out to remove internal references from the
 published metadata and, in one place, moved them instead. This finishes the job and adds the
