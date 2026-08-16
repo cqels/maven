@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CQELS 2.0.0-alpha.19</title>
+<style>
+  body { font: 16px/1.6 -apple-system, system-ui, sans-serif;
+         max-width: 46rem; margin: 3rem auto; padding: 0 1.25rem;
+         color: rgb(26,26,26); background: rgb(255,255,255); }
+  h1, h2 { line-height: 1.25; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { background: rgb(246,248,250); padding: 1rem; overflow-x: auto;
+        border-radius: 6px; }
+  a { color: rgb(6,69,173); }
+  .muted { color: rgb(90,90,90); font-size: 0.9rem; }
+  @media (prefers-color-scheme: dark) {
+    body { color: rgb(230,230,230); background: rgb(20,20,20); }
+    pre { background: rgb(35,35,35); }
+    a { color: rgb(120,170,255); }
+    .muted { color: rgb(160,160,160); }
+  }
+</style>
+</head>
+<body>
+<h1>CQELS 2.0.0-alpha.19</h1>
+<p><a href="/">All releases</a> &middot;
+<a href="/releases/supply-chain/2.0.0-alpha.19/VERIFY.md">How to verify this release</a></p>
+<pre># CQELS 2.0.0-alpha.19
+
+A **query-correctness release, part two.** Where alpha.12 fixed evaluation-breaking parse/dispatch
+bugs, alpha.19 closes out a P1 queue covering SPARQL error semantics (effective boolean value, `IF`,
+built-in type errors), a compiled-query row representation that string-lifted IRIs and blank nodes
+into false equalities, complete-match semantics for `OPTIONAL`/`UNION`/`FILTER NOT EXISTS`, and four
+streaming-liveness defects — including `ORDER BY`/`LIMIT` queries that emitted nothing, ever, on a
+continuous stream. Plus a SHACL feature (property-based targets) and a CI reliability fix.
+
+### Added
+- **SHACL `sh:targetSubjectsOf` / `sh:targetObjectsOf` property-based targets** — both target kinds
+  are now first-class across the parser/model, ASP compilation (`target_subjects_of`/
+  `target_objects_of` facts feeding the existing `focus/2` union-with-dedup machinery, shared
+  structurally between sync and continuous validation), and repair-candidate generation. Literal
+  focus nodes (from `targetObjectsOf`) are validated but not repairable (existing `Resource` guard).
+  SPARQL-based `sh:target` remains rejected.
+
+### Fixed
+
+**SPARQL error semantics**
+- **Effective boolean value (EBV) was wrong at eight truth-test sites** — five in
+  `CqelsQueryCompiler` (stream-only expression execution, in-batch BIND filter, `applyFilters`, the
+  OPTIONAL inner-block filter, HAVING) and three in CEP&#x27;s `CepPatternCompiler` (single-pattern event
+  filter, multi-candidate acceptance, cross-event context guards). All eight tested
+  `value instanceof Literal &amp;&amp; booleanValue()`, which throws — and was caught as reject — on any
+  non-`xsd:boolean` literal, so `FILTER(?x)` over a numeric or typed-string binding always dropped
+  the row instead of applying real SPARQL §17.2.2 EBV. All eight now route through
+  `ExpressionEvaluator.effectiveBoolean(value)` with error-rejecting polarity.
+- **`ExpressionEvaluator` carried two EBV implementations that disagreed.** The private `ebv()` used
+  by `||`/`&amp;&amp;`/`!`/`IF` invented booleans (an IRI evaluated TRUE; unknown datatypes fell back to a
+  label heuristic), while the public `effectiveBoolean()` was already §17.2.2-correct. Both now share
+  the correct path: `IF(error, a, b)` propagates the error per §17.4.1.2 instead of silently taking
+  the else branch, SPARQL three-valued logic for `||`/`&amp;&amp;` is pinned in both operand orders
+  (`false || &lt;iri&gt;` previously returned TRUE), lang-tagged literals get label-based EBV, and
+  malformed numeric/boolean lexicals evaluate FALSE per §17.2.2 rule 1. Built-in functions also
+  silently coerced type errors into ordinary values: `CONTAINS`/`STRSTARTS`/`STRENDS` now enforce
+  full §17.4.3.1.2 argument-compatibility instead of coercing non-string arguments to `false`;
+  `LANG()` of a non-literal errors instead of returning `&quot;&quot;`; `BNODE()` is now arity-sensitive —
+  `BNODE(?unbound)` errors instead of silently minting a fresh blank node (it previously aliased the
+  zero-arg case), and 2+ arguments error; `YEAR`/`MONTH`/`DAY`/`HOURS`/`MINUTES`/`SECONDS` are gated
+  on `xsd:dateTime`.
+- **Compiled-query rows string-lifted IRIs and blank nodes**, so `FILTER(?x = &lt;iri&gt;)` against a
+  static- or stream-bound IRI variable matched nothing (an `xsd:string` literal never RDF-term-equals
+  an IRI), bare `FILTER(?iri)` was wrongly admitted instead of raising the type error the EBV fix had
+  just added everywhere else, `DISTINCT` collapsed an IRI with a same-lexical string literal, and
+  `MIN`/`MAX` over IRI-valued groups folded to null. `rdfValueToJavaObject` now returns the real
+  RDF4J `Value` for IRI/BNode across roughly twenty consuming sites (join keys, GROUP BY/DISTINCT/
+  ORDER BY keys, aggregation payloads, BIND, journaling); literals keep their existing string-lift
+  for now — typed/lang-literal fidelity is tracked separately.
+  &gt; **Behavior change:** `Map&lt;String,Object&gt;` row values for IRI-valued variables are now
+  &gt; `org.eclipse.rdf4j.model.IRI`, not `String`. `String.valueOf(...)`/`.toString()` callers are
+  &gt; unaffected (identical text). Code that does `(String) row.get(...)` on an IRI-valued variable
+  &gt; must adapt — check CQELS4J examples and any private downstream consumer before upgrading.
+- **`OPTIONAL`/`UNION`/`FILTER NOT EXISTS` treated a multi-triple static BGP as a disjunction** — the
+  shared `tryMatchStaticOptional` probe accepted any single matching pattern as if the whole BGP
+  matched, and overwrote pre-bound variables without a compatibility check. `OPTIONAL` emitted
+  partial extensions (some variables bound, others left null), including residue from solutions its
+  own inner `FILTER` had rejected; `UNION` could declare a multi-triple arm matched after a single
+  triple — the under-bound-row symptom behind a now-closed defect; `FILTER NOT EXISTS`
+  over-rejected, dropping rows on a partial match even when no complete assignment existed. Replaced
+  with a thin adapter over the existing complete-conjunction `StaticBgpMatcher`, giving each consumer
+  its correct fold (bag-multiplicity OPTIONAL/UNION rows, drop-iff-complete-match for NOT EXISTS).
+ 
+
+**Streaming liveness**
+- **`ORDER BY`/`LIMIT` on a continuous (never-completing) query emitted nothing, ever, or silently
+  terminated the query.** The `collectList()`-based sort only completes on upstream `onComplete`,
+  which an engine-registered stream never sends, so every `ORDER BY` query emitted nothing while the
+  collected list grew unboundedly; bare `LIMIT` used `Flux#take(k)`, emitting k rows and then
+  cancelling the subscription. Every existing test used a finite source, so neither defect was ever
+  observed. Fixed with a query-shape dispatch — a maintainer-approved design:
+
+  | Query shape | Behavior |
+  |---|---|
+  | Windowed — any route with an evaluation boundary | `ORDER BY`/`LIMIT` applied **inside** each evaluation batch, in SPARQL §18.2.5 order (`HAVING → ORDER BY → DISTINCT → LIMIT`) |
+  | Unwindowed, `ORDER BY` + `LIMIT k` together | continuous top-K — bounded state, current top-K re-emitted whenever it changes |
+  | Unwindowed, bare `ORDER BY` | **rejected at registration** — reserves a future Flink-style time-ascending carve-out |
+  | Unwindowed, bare `LIMIT` | **rejected at registration** — the `take(k)` silent-cancellation path is removed entirely |
+
+  Also fixed in passing: `DISTINCT` was evaluated before `ORDER BY` on both the batch and flat paths,
+  which is nonconforming per the SPARQL algebra and observable under `LIMIT`.
+- **The parallel BGP join dropped variable-predicate bindings.** `parallelIndexedHashJoinBindings`
+  (the ≥4-distinct-subject dispatch threshold) accepted variable predicates but never checked
+  predicate consistency or bound `?p` — the serial path did both. `?s ?p ?o` rows silently lost `?p`,
+  and `{ ?s ?p ?o . ?s ?p ?x }` joined across *different* predicates, producing a full cross product
+  instead of the predicate-matched one. Fixed by porting the serial guard and bind. Adjacent, filed
+  separately: the serial matcher itself doesn&#x27;t enforce repeated-variable agreement within one
+  pattern.
+- **`BindOperator` mutated the incoming `SPARQLResult`, so fan-out subscribers could see each other&#x27;s
+  bindings**; it now copies on write. `EnrichedLookupJoinOperator`/`TemporalLookupJoinOperator` used
+  a bare `flatMap` whose ordering was an accident of synchronous lookups rather than a stated
+  contract; now `concatMap`, with ordered/serial/no-new-scheduler behavior codified in Javadoc and
+  pinned by an in-flight-counter invariant test.
+- **`WindowedAggregateOperator` (and its parallel sibling) dropped every window still open at stream
+  completion** — a window only emitted when a *later* element closed it, so finite replays and
+  benchmarks silently computed over N−1 windows. Fixed with a terminal flush on `onComplete`,
+  mirroring the existing terminal-watermark idiom, with deterministic emission order across
+  drained windows. Both operators also converge on one stream-wide event-time watermark per
+  subscription that drives lateness rejection and window closure together across every group,
+  matching the documented lateness contract and resolving an earlier per-group design&#x27;s
+  cross-group inconsistency.
+- **The five shipped `cep-*.cqels` demo queries computed the wrong thing since they were added.**
+  `QueryRegistry` had no CEP branch, so `FILTER(SEQ(...))` queries ran on the plain per-arrival
+  windowed hash join, which treats sequence events as independent patterns: matches were
+  order-insensitive (a *reversed* event sequence still &quot;matched&quot;), and `cep-road-rage.cqels`&#x27;s
+  three-pattern, no-join-variable shape hit the alpha.18 cross-product cap at fleet scale.
+  Routing now dispatches on the parsed AST (`queryDef.hasCepPattern()`) instead of filename, sending
+  real CEP queries through `engine.registerCepQuery`. **Consumer-visible:** the five queries&#x27;
+  writeback payload format changes from map-formatted join rows to
+  `events=N, startTs=…, endTs=…, durationMs=…`, and they move from `unregisterQuery` to
+  `unregisterCepQuery`&#x27;s namespace.
+
+**CEP / relation semantics**
+- **A CEP registration queued during a concurrent engine start could be silently discarded.**
+  `submitCepRegistration()`&#x27;s check-then-enqueue against `pendingCepRegistrations` raced the winning
+  starter&#x27;s `forEach` + `clear()` drain: a registration appended between the drain&#x27;s snapshot and its
+  clear was deleted without ever running, leaving its record permanently `RESERVED` on a `RUNNING`
+  engine with no subscription and no error. Fixed with a post-append lifecycle recheck; `stop()` gets
+  the same treatment via a `volatile stopInitiated` flag so a registration racing shutdown retires its
+  own record instead of leaking.
+- **`RStreamOperator`&#x27;s window state was a set, not the bag RSP-QL defines.** Adding the same element
+  twice collapsed to one occurrence, and removing one occurrence deleted the whole equality class —
+  the issue&#x27;s own reproducer (add `[e, e]`, remove `[e]`) produced snapshot sizes 1 and 0 where bag
+  semantics require 2 and 1. `WindowState` now keeps a `LinkedHashMap` of per-equality-class FIFO
+  deques: multiplicity is preserved, one removal retracts exactly one (the oldest) occurrence, and
+  snapshot ordering is deterministic. `IStreamOperator`/`DStreamOperator` were already bag-faithful;
+  their Javadoc now says so explicitly, and the compiled CQELS-QL `Istream(...)` layer is confirmed
+  to already be a multiset difference.
+- **The single-stream static lookup-join path resolved projected variables structurally instead of
+  evaluating the static BGP** — a subject-position-only variable (e.g. `?wall` in `?wall :hosts
+  ?board`) never reached the listener row, and when the static BGP had no solution the stream-only
+  row shipped anyway, masquerading as a successful enrichment. `mapToResultRows` now seeds the
+  existing `StaticBgpMatcher` with the stream-side bindings and treats its solutions as authoritative:
+  no solution drops the row (inner-join semantics), and a multi-solution match emits one row per
+  satisfying assignment (SPARQL bag semantics) instead of one first-match row.
+
+### Changed
+- **CI&#x27;s three heavy jobs (`build`, `build-cdsp`, `build-asp-exhaustive`) now run inside a
+  digest-pinned `maven:3.9.9-eclipse-temurin-{17,21}` container.** The self-hosted runner pool has
+  two runners sharing the same labels that are not interchangeable on the host (one had no working
+  `mvn`/`java`, the other had a nearly-full disk), which was producing spurious, runner-dependent CI
+  reds (`ENOSPC` in one, `mvn: command not found` in the other) unrelated to the code under review.
+  Test `/tmp` now lives inside the container, on a volume large enough to survive the pre-existing
+  `/tmp` leak; `semantic-parity-gate` stays hosted and untouched.
+- **A nightly JDK 25 compatibility probe** runs the reactor&#x27;s tests under JDK 25 on a schedule
+  (deliberately not a third CI matrix leg — the heavy jobs already run one at a time on the
+  self-hosted runner, and a third leg would stretch every merge&#x27;s serialized build time). It
+  publishes nothing and does not change the `maven.compiler.release=17` target.
+
+### Upgrade notes
+- **Review the behavior changes above before upgrading** — several outputs differ where bugs were
+  fixed: `Map&lt;String,Object&gt;` row values for IRI-valued variables are now `IRI`, not `String`;
+  `OPTIONAL`/`UNION`/`FILTER NOT EXISTS` no longer emit partial-match rows; the five
+  `cep-*.cqels` demo queries&#x27; writeback format and unregister call change; RSTREAM relations
+  now report real bag multiplicity instead of set-collapsed counts; and a static lookup-join
+  match now emits one row per static solution instead of a single first match. None of these
+  are regressions — each replaces a silently wrong or incomplete result with a spec-correct one.
+- **Bare `ORDER BY` or bare `LIMIT` on an unwindowed, unbounded stream is now rejected at
+  registration** instead of emitting nothing or silently terminating the query. If you relied
+  on the old `take(k)`-and-stop behavior, add an explicit window or pair `ORDER BY` with `LIMIT` for
+  continuous top-K.
+- **`FILTER(?x)` and similar EBV-driven guards now follow SPARQL §17.2.2 exactly**:
+  rows that were previously dropped on a non-boolean-literal EBV, or admitted on a type error that
+  should reject, will change. Type-error-producing built-ins (`BNODE(?unbound)`, `LANG()` of a
+  non-literal, incompatible `CONTAINS`/`STRSTARTS`/`STRENDS` arguments) now raise errors instead of
+  returning a best-effort value.
+
+### Known issues / follow-ups
+- **Typed and language-tagged literal fidelity** — the row representation still string-lifts
+  `xsd:dateTime` and other typed/lang literals, so a bare `FILTER(?dt)` over such a binding is still
+  wrongly admitted, and `datatype()`/`lang()` lose fidelity. Deliberately out of scope for the IRI/
+  BNode fix (naive N-Triples-form preservation would leak `^^`/`@lang` syntax into `GROUP_CONCAT`,
+  group keys, and `ORDER BY`&#x27;s string fallback).
+- **Modifier-free per-arrival routes ignore their declared window entirely** — a query with no
+  `FILTER`/`BIND`/aggregate on the per-arrival dispatch emits byte-identically under `[NOW]`,
+  `[RANGE 1s]`, or `[TRIPLES 2]`. The ORDER BY/LIMIT fix closed the ranking consequence (these routes
+  now reject windowed `ORDER BY`/`LIMIT` rather than ranking globally), but the underlying inert
+  window remains for modifier-free queries.
+- **Multi-stream / multi-window joins are effectively unimplemented** — the only route
+  that understands two streams is a narrow event-time interval join with no watermark control, no
+  retraction, and no state bound; the tested, correct multi-way join machinery
+  (`MultiWayJoinState`/`JoinGraph`) is unreachable from the query language, and a multi-stream
+  declaration without a matching number of `STREAM` blocks silently falls back to a
+  nondeterministically chosen single stream. Tracked as a dedicated audit/campaign, out of scope
+  here.
+
+
+## Using this release
+
+Artifacts resolve anonymously — no token, no `settings.xml`:
+
+```xml
+&lt;repositories&gt;
+  &lt;repository&gt;
+    &lt;id&gt;cqels&lt;/id&gt;
+    &lt;name&gt;CQELS Releases&lt;/name&gt;
+    &lt;url&gt;https://maven.cqels.org/releases&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+
+&lt;dependency&gt;
+  &lt;groupId&gt;org.cqels&lt;/groupId&gt;
+  &lt;artifactId&gt;cqels-engine&lt;/artifactId&gt;
+  &lt;version&gt;2.0.0-alpha.19&lt;/version&gt;
+&lt;/dependency&gt;
+```
+
+## Verifying this release
+
+The signed manifest and its signature are served from the artifact repository;
+the public key is served from a different origin, so verifying with it is not
+circular. Take the key from the commit pinned below.
+
+```bash
+set -euo pipefail
+BASE=https://maven.cqels.org/releases/supply-chain/2.0.0-alpha.19
+
+curl -fsSLO https://raw.githubusercontent.com/cqels/CQELS4J/d38c4305004a18d6d0c7cf72bd52e2af0191788c/cosign.pub
+echo &quot;36dd8daa9988f23eb40c4f3550fa7bdfa3796e5e58cce8d23b9cc6a99f47f30b  cosign.pub&quot; | sha256sum --check --strict - || exit 1
+
+curl -fsSLO &quot;$BASE/SHA256SUMS&quot; -O &quot;$BASE/SHA256SUMS.bundle&quot;
+cosign verify-blob --key cosign.pub --bundle SHA256SUMS.bundle \
+  --new-bundle-format=false --insecure-ignore-tlog SHA256SUMS
+```
+
+The URL is pinned to a commit rather than to `master`, so it keeps working
+after a key rotation. `--insecure-ignore-tlog` is expected: these signatures
+carry no transparency-log entry, which is precisely why the key&#x27;s origin
+matters. Full walkthrough: https://github.com/cqels/CQELS4J/blob/master/SUPPLY_CHAIN.md
+</pre>
+
+</body>
+</html>
